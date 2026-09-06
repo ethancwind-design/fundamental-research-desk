@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><title>Pico W launches with Infineon wireless · source reading copy</title><style>body{margin:0;background:#fff;color:#18212b;font:17px/1.7 Georgia,serif}main{max-width:900px;margin:0 auto;padding:36px 28px 80px}h1,h2,h3,h4{font-family:system-ui,sans-serif;line-height:1.25}h1{font-size:30px}.attribution{font:13px/1.6 system-ui,sans-serif;border-bottom:1px solid #ccd2d8;padding-bottom:22px;margin-bottom:32px;color:#5c6670}a{color:#105c49;overflow-wrap:anywhere}table{border-collapse:collapse;display:block;max-width:100%;overflow-x:auto;margin:24px 0;font-size:14px}th,td{border:1px solid #cbd2d8;padding:8px;min-width:45px;vertical-align:top}pre{white-space:pre-wrap;overflow-wrap:anywhere}blockquote{border-left:3px solid #bbb;padding-left:18px;margin-left:0}@media(max-width:500px){main{padding:24px 16px}h1{font-size:25px}}@media print{main{padding:0}body{font-size:12px}}</style></head><body><main><div class="attribution"><strong>Fundamental Research Desk · V1 public example</strong><br>Publisher: Raspberry Pi<br>Published: 2022-06-30 · Captured: 5 September 2026<br><a href="https://www.raspberrypi.com/news/raspberry-pi-pico-w-your-6-iot-platform/" target="_blank" rel="noopener noreferrer">Open the publisher source ↗</a><p>A reading copy of a public primary-source article. Publisher wording and tables are retained; scripts, navigation, comments, publisher styling and embedded media are omitted. The live source and original PDF, where available, remain authoritative. This copy contains no AI reconstruction of missing source material.</p></div><h1>Pico W launches with Infineon wireless</h1><article><article>
+
+<h1>Raspberry Pi Pico W: your $6 IoT platform</h1>
+<div>
+
+
+
+<ul>
+<li>
+            30th Jun 2022        </li>
+<li>
+<a href="https://www.raspberrypi.com/news/author/eben" rel="noopener noreferrer" target="_blank">
+                Eben Upton            </a>
+</li>
+<li>
+<a href="https://www.raspberrypi.com/news/raspberry-pi-pico-w-your-6-iot-platform/#comments" rel="noopener noreferrer" target="_blank">
+                112 comments            </a>
+</li>
+</ul>
+
+</div>
+
+<div>
+<p>New product alert! In January last year, we <a href="https://www.raspberrypi.com/news/raspberry-pi-silicon-pico-now-on-sale/" rel="noopener noreferrer" target="_blank">launched</a> the $4 Raspberry Pi Pico, our first product built on silicon designed here at Raspberry Pi. At its heart is the <a href="https://www.raspberrypi.com/products/rp2040/" rel="noopener noreferrer" target="_blank">RP2040</a> microcontroller, built on TSMC’s 40nm low-power process, and incorporating two 133MHz Arm Cortex-M0+ cores, 264kB of on-chip SRAM, and our unique programmable I/O subsystem.</p>
+<div>
+<p>Media in original article: <a href="https://www.youtube.com/embed/QIdyTlmdVW8?feature=oembed" rel="noopener noreferrer" target="_blank">NEW Raspberry Pi Pico W - your $6 wireless microcontroller</a></p>
+</div>
+<p>Since launch, we’ve sold nearly two million <a href="https://www.raspberrypi.com/products/raspberry-pi-pico/" rel="noopener noreferrer" target="_blank">Pico</a> boards, and RP2040 has found its way into a huge number of third-party products. We always believed that RP2040 was a great fit for commercial and industrial applications, but the global semiconductor shortage has vastly accelerated adoption. With millions of units on hand today, and pipeline in place for tens of millions more, design engineers who have been let down by their current suppliers have a perfect excuse to experiment.</p>
+<div><p>Media in original article: <a href="https://www.raspberrypi.com/app/uploads/2022/06/Copy-of-PICO-W-HERO-800x533.jpg" rel="noopener noreferrer" target="_blank">Pico W hero</a></p>Meet Raspberry Pi Pico W</div>
+<p>Fast cores, large memory, and flexible interfacing make RP2040 a natural building block for Internet of Things (IoT) applications. But Pico itself has one obvious missing feature for IoT: a method for connecting to the network. Now, this is about to change.</p>
+<div><p>Media in original article: <a href="https://www.raspberrypi.com/app/uploads/2022/06/PICO_H_HERO_1-800x533.jpg" rel="noopener noreferrer" target="_blank">Pico H hero topside front diagonal</a></p>And here’s Raspberry Pi Pico H</div>
+<p>Today, we’re launching three new members of the Pico family. Raspberry Pi Pico W is priced at $6, and brings 802.11n wireless networking to the Pico platform, while retaining complete pin compatibility with its older sibling. Pico H ($5) and Pico WH ($7) add pre-populated headers, and our new <a href="https://datasheets.raspberrypi.com/debug/debug-connector-specification.pdf" rel="noopener noreferrer" target="_blank">3-pin debug connector</a>, to Pico and Pico W respectively. Pico H and Pico W are available today; Pico WH will follow in August.</p>
+<div>RP2040: a natural building block</div>
+<p>We’ve worked with our friends at Infineon to add their <a href="https://www.infineon.com/cms/en/product/wireless-connectivity/airoc-wi-fi-plus-bluetooth-combos/cyw43439/" rel="noopener noreferrer" target="_blank">CYW43439</a> wireless chip to Pico W. Like all modern Raspberry Pi boards, the radio circuitry is encapsulated in a metal shield can, reducing compliance costs for customers who want to integrate it into their own products. </p>
+<p>Eagle-eyed readers of <a href="https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf" rel="noopener noreferrer" target="_blank">datasheets</a> will notice that CYW43439 supports both Bluetooth Classic and Bluetooth Low-Energy: we have not enabled Bluetooth on Pico W at launch, but may do so in the future.</p>
+<h2>Software and documentation</h2>
+<p>For C developers, today’s release of <a href="https://github.com/raspberrypi/pico-sdk" rel="noopener noreferrer" target="_blank">the Pico SDK</a> includes wireless networking support. The network stack is built around <a href="https://savannah.nongnu.org/projects/lwip/" rel="noopener noreferrer" target="_blank">lwIP</a>, and uses libcyw43 from Damien George (of MicroPython fame) to communicate with the wireless chip. By default, libcyw43 is licensed for non-commercial use, but Pico W users, and anyone else who builds their product around RP2040 and CYW43439, benefit from a free commercial-use license.</p>
+
+<p>Media in original article: <a href="https://www.raspberrypi.com/app/uploads/2022/06/PICO_H_HERO_1-800x533.jpg" rel="noopener noreferrer" target="_blank">Pico H hero topside front diagonal</a></p>
+<p>Media in original article: <a href="https://www.raspberrypi.com/app/uploads/2022/06/PICO_H_HERO_2-800x547.jpg" rel="noopener noreferrer" target="_blank">Pico H hero underside bottom</a></p>
+
+<p>MicroPython users can download an updated <a href="https://datasheets.raspberrypi.com/soft/micropython-firmware-pico-w-290622.uf2" rel="noopener noreferrer" target="_blank">UF2 image with networking support</a> for Pico W. I love how this has come together: connecting a USB cable, opening a serial terminal, typing:</p>
+<pre><code>import network
+
+wlan = network.WLAN(network.STA_IF)
+wlan.active(True)
+print(wlan.scan())
+</code></pre>
+<p>at the REPL, and seeing a list of available access points, has a wonderfully immediate feel.</p>
+<p>This UF2 firmware we’re making available for Pico W is a separate build to the existing MicroPython firmware for our original Pico board. We’ll be upstreaming the changes to the main <a href="https://github.com/micropython/micropython" rel="noopener noreferrer" target="_blank">MicroPython repository</a> soon after launch, but as MicroPython has separate binaries on a per-board rather than per-architecture basis there will always be two distinct UF2 firmware releases going forward. One for Pico, the other for Pico W.</p>
+<div><p>Media in original article: <a href="https://www.raspberrypi.com/app/uploads/2022/06/Image-from-iOS-800x747.jpg" rel="noopener noreferrer" target="_blank">Pico W compliance ruler image</a></p>Super tiny</div>
+<p>Getting started guides for C and MicroPython, as well as links to API level documentation, to <a href="https://datasheets.raspberrypi.com/picow/connecting-to-the-internet-with-pico-w.pdf" rel="noopener noreferrer" target="_blank">get you online</a> are available in the <a href="https://www.raspberrypi.com/documentation/microcontrollers/" rel="noopener noreferrer" target="_blank">microcontrollers section of our documentation</a> site. Over the next month or two we’ll be rolling out more demos and documentation to help you get the most out of your Pico W.</p>
+<p>We’re incredibly excited about Pico W, and can’t wait to see what you build with it. You can <a href="https://www.raspberrypi.com/products/raspberry-pi-pico/" rel="noopener noreferrer" target="_blank">order your own</a> right here.</p>
+<h2>Credits</h2>
+<p>Like all Raspberry Pi products, Pico W has been a team effort, drawing on the talents of people from across the organisation. Particular credit is due to Dominic Plunkett for hardware; Liam Fraser, Damien George, Peter Harper, and Graham Sanderson for software; Roger Thornton and Tom Westcott for compliance and test engineering; and Alasdair Allan and Andrew Scheller for documentation. At Infineon, Graham Smith has provided invaluable support throughout the development program.</p>
+</div>
+</article></article></main></body></html>

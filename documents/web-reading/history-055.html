@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><title>Silicon carbon methodology revised · source reading copy</title><style>body{margin:0;background:#fff;color:#18212b;font:17px/1.7 Georgia,serif}main{max-width:900px;margin:0 auto;padding:36px 28px 80px}h1,h2,h3,h4{font-family:system-ui,sans-serif;line-height:1.25}h1{font-size:30px}.attribution{font:13px/1.6 system-ui,sans-serif;border-bottom:1px solid #ccd2d8;padding-bottom:22px;margin-bottom:32px;color:#5c6670}a{color:#105c49;overflow-wrap:anywhere}table{border-collapse:collapse;display:block;max-width:100%;overflow-x:auto;margin:24px 0;font-size:14px}th,td{border:1px solid #cbd2d8;padding:8px;min-width:45px;vertical-align:top}pre{white-space:pre-wrap;overflow-wrap:anywhere}blockquote{border-left:3px solid #bbb;padding-left:18px;margin-left:0}@media(max-width:500px){main{padding:24px 16px}h1{font-size:25px}}@media print{main{padding:0}body{font-size:12px}}</style></head><body><main><div class="attribution"><strong>Fundamental Research Desk · V1 public example</strong><br>Publisher: Raspberry Pi<br>Published: 2026-08-28 · Captured: 5 September 2026<br><a href="https://www.raspberrypi.com/news/a-better-model-for-silicon-quantifying-chip-carbon-with-columbia-and-cornell/" target="_blank" rel="noopener noreferrer">Open the publisher source ↗</a><p>A reading copy of a public primary-source article. Publisher wording and tables are retained; scripts, navigation, comments, publisher styling and embedded media are omitted. The live source and original PDF, where available, remain authoritative. This copy contains no AI reconstruction of missing source material.</p></div><h1>Silicon carbon methodology revised</h1><article><article>
+
+<h1>A better model for silicon: quantifying chip carbon with Columbia and Cornell</h1>
+<div>
+
+
+
+<ul>
+<li>
+            28th Aug 2026        </li>
+<li>
+<a href="https://www.raspberrypi.com/news/author/rogerthornton" rel="noopener noreferrer" target="_blank">
+                Roger Thornton            </a>
+</li>
+<li>
+<a href="https://www.raspberrypi.com/news/a-better-model-for-silicon-quantifying-chip-carbon-with-columbia-and-cornell/#comments" rel="noopener noreferrer" target="_blank">
+                0 comments            </a>
+</li>
+</ul>
+
+</div>
+
+<div>
+<p>In a <a href="https://www.raspberrypi.com/wp/wp-admin/post.php?post=139642&amp;action=edit" rel="noopener noreferrer" target="_blank">previous post</a>, we described how we calculate the embodied carbon of our products: weighing each component, mapping those weights to the ecoinvent database, and working with our partners to build a full life cycle assessment (LCA). It’s a solid, tangible approach — but as we looked harder at the results, one part of the picture kept nagging at us:</p>
+<p>Silicon.</p>
+<div></div>
+
+<h2><strong>Why weight was the wrong lens for chips</strong></h2>
+<p>Mapping a component to an emissions figure by its weight works well for a great many materials. However, the carbon embodied in a piece of silicon is affected by both weight and how it was made: the process node, the die area, the number of manufacturing steps, the energy intensity of the fab, and the manufacturing yield.</p>
+<p>Treating our chips as generic mass, mapped to a broad semiconductor dataset, left us with figures that we increasingly felt overstated the true emissions of the silicon we actually use. We were confident the number was conservative — but conservative isn’t the same as correct.</p>
+<h2><strong>Enter MicroGreen and ACT</strong></h2>
+<p>The answer came from <a href="https://github.com/S4AI-CornellTech/MicroGreen" rel="noopener noreferrer" target="_blank">MicroGreen</a>, a tool developed by researchers at Cornell and Columbia, which is based upon ACT, the <a href="https://dl.acm.org/doi/abs/10.1145/3745756.3809201" rel="noopener noreferrer" target="_blank">Architectural Carbon Modeling Tool</a> developed by Harvard and Meta. MicroGreen and ACT were built to enable engineers to quantify the embodied carbon of hardware and treat it as a first-order design consideration, sitting alongside performance and power. Rather than inferring carbon quantity from weight, it models the embodied footprint of semiconductors from the properties that actually contribute to it: die area, process technology, manufacturing yield, and the emissions from the fabrication process itself. It captures the intricacies of silicon in a way a weight-based method cannot.</p>
+<p>We’ve had the privilege of working directly with Udit Gupta, Ariel Goldner, and Xuesi Chen to apply MicroGreen/ACT to our own products. Together, we worked through the specifics of our silicon, matching the model to the chips we really ship rather than an industry average.</p>
+<p>Researchers at Cornell Tech and Columbia explain: </p>
+<blockquote>
+<p>”Collaborating with Raspberry Pi has shown us how a tool developed in the lab can be applied to sustainability questions at production scale. Applying MicroGreen to the Raspberry Pi actually grounds our research in reality and dramatically increases the impact our work can have.” </p>
+</blockquote>
+<p>The results have been eye-opening. By modelling our silicon properly, we’ve reduced our overall product LCA by around 30% — not by changing anything about the products themselves, but by finally understanding their emissions accurately. A large portion of what we had been carrying as embodied carbon simply wasn’t there.</p>
+<h2><strong>Why this matters</strong></h2>
+<p>We couldn’t be happier with the work. A more accurate model isn’t just about a lower headline number; it ensures the figures we report reflect reality, and that the decisions we make from here in design, sourcing, and where we focus our efforts are built on firm ground.</p>
+<p>Our thanks go to Udit, Ariel, and Xuesi. The model they have built, and the work we have done together, has made our carbon reporting meaningfully better.</p>
+</div>
+</article></article></main></body></html>

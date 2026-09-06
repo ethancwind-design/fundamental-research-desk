@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><title>Raspberry Pi 3 adds wireless and 64-bit CPU · source reading copy</title><style>body{margin:0;background:#fff;color:#18212b;font:17px/1.7 Georgia,serif}main{max-width:900px;margin:0 auto;padding:36px 28px 80px}h1,h2,h3,h4{font-family:system-ui,sans-serif;line-height:1.25}h1{font-size:30px}.attribution{font:13px/1.6 system-ui,sans-serif;border-bottom:1px solid #ccd2d8;padding-bottom:22px;margin-bottom:32px;color:#5c6670}a{color:#105c49;overflow-wrap:anywhere}table{border-collapse:collapse;display:block;max-width:100%;overflow-x:auto;margin:24px 0;font-size:14px}th,td{border:1px solid #cbd2d8;padding:8px;min-width:45px;vertical-align:top}pre{white-space:pre-wrap;overflow-wrap:anywhere}blockquote{border-left:3px solid #bbb;padding-left:18px;margin-left:0}@media(max-width:500px){main{padding:24px 16px}h1{font-size:25px}}@media print{main{padding:0}body{font-size:12px}}</style></head><body><main><div class="attribution"><strong>Fundamental Research Desk · V1 public example</strong><br>Publisher: Raspberry Pi<br>Published: 2016-02-29 · Captured: 5 September 2026<br><a href="https://www.raspberrypi.com/news/raspberry-pi-3-on-sale/" target="_blank" rel="noopener noreferrer">Open the publisher source ↗</a><p>A reading copy of a public primary-source article. Publisher wording and tables are retained; scripts, navigation, comments, publisher styling and embedded media are omitted. The live source and original PDF, where available, remain authoritative. This copy contains no AI reconstruction of missing source material.</p></div><h1>Raspberry Pi 3 adds wireless and 64-bit CPU</h1><article><article>
+
+<h1>Raspberry Pi 3 on sale now at $35</h1>
+<div>
+
+
+
+<ul>
+<li>
+            29th Feb 2016        </li>
+<li>
+<a href="https://www.raspberrypi.com/news/author/eben" rel="noopener noreferrer" target="_blank">
+                Eben Upton            </a>
+</li>
+<li>
+<a href="https://www.raspberrypi.com/news/raspberry-pi-3-on-sale/#comments" rel="noopener noreferrer" target="_blank">
+                810 comments            </a>
+</li>
+</ul>
+
+</div>
+
+<div>
+<p><i>Another update: I managed to miss Baruyr Mirican and Darshan Gopal from the Broadcom test engineering team off the list too. My grade this year is D: must do better.</i></p>
+<p><i>Update: I did a rather poor job of collating the credits list this time. Apologies to Aravind Appajappa, Jeff Baer, Saran Kumar Seethapathi and Noumaan Shah.</i></p>
+<p>Exactly four years ago, on 29 February 2012, we <a href="https://www.raspberrypi.org/blog/and-breathe/" rel="noopener noreferrer" target="_blank">unleashed</a> the original 256MB Raspberry Pi Model B on a largely unsuspecting world. Since then, we’ve shipped <strong>over eight million units</strong>, including three million units of <a href="https://www.raspberrypi.org/blog/raspberry-pi-2-on-sale/" rel="noopener noreferrer" target="_blank">Raspberry Pi 2</a>, making us the UK’s all-time best-selling computer. The Raspberry Pi Foundation has grown from a handful of volunteers to have over sixty full-time employees, including our new friends from <a href="https://www.codeclub.org.uk/" rel="noopener noreferrer" target="_blank">Code Club</a>. We’ve sent a Raspberry Pi to the <a href="https://astro-pi.org/" rel="noopener noreferrer" target="_blank">International Space Station</a> and are training teachers around the world through our <a href="https://www.raspberrypi.org/picademy/" rel="noopener noreferrer" target="_blank">Picademy</a> program.</p>
+<p>In celebration of our fourth birthday, we thought it would be fun to release something new. Accordingly, Raspberry Pi 3 is <b>now on sale for $35</b> (the same price as the existing Raspberry Pi 2), featuring:</p>
+<ul>
+<li>A <b>1.2GHz 64-bit quad-core</b> ARM Cortex-A53 CPU (~10x the performance of Raspberry Pi 1)</li>
+<li>Integrated 802.11n wireless LAN and Bluetooth 4.1</li>
+<li>Complete compatibility with Raspberry Pi 1 and 2</li>
+</ul>
+<div><a href="https://www.raspberrypi.com/wp-content/uploads/2016/02/IMG_4090.jpg" rel="noopener noreferrer" target="_blank"><p>Media in original article: <a href="https://www.raspberrypi.com/wp-content/uploads/2016/02/IMG_4090-500x334.jpg" rel="noopener noreferrer" target="_blank">Raspberry Pi 3 Model B</a></p></a><p>Raspberry Pi 3 Model B</p></div>
+<h2>BCM2837, BCM43438 and Raspberry Pi 3</h2>
+<p>For Raspberry Pi 3, Broadcom have supported us with a new SoC, BCM2837. This retains the same basic architecture as its predecessors BCM2835 and BCM2836, so all those projects and tutorials which rely on the precise details of the Raspberry Pi hardware will continue to work. The 900MHz 32-bit quad-core ARM Cortex-A7 CPU complex has been replaced by a custom-hardened 1.2GHz 64-bit quad-core ARM Cortex-A53. Combining a 33% increase in clock speed with various architectural enhancements, this provides a 50-60% increase in performance in 32-bit mode versus Raspberry Pi 2, or roughly a factor of ten over the original Raspberry Pi.</p>
+<p>James Adams spent the second half of 2015 designing a series of prototypes, incorporating BCM2837 alongside the BCM43438 wireless “combo” chip. He was able to fit the wireless functionality into very nearly the same form-factor as the Raspberry Pi 1 Model B+ and Raspberry Pi 2 Model B; the only change is to the position of the LEDs, which have moved to the other side of the SD card socket to make room for the antenna. Roger Thornton ran the extensive (and expensive) wireless conformance campaign, allowing us to launch in almost all countries simultaneously. Phil Elwell developed the wireless LAN and Bluetooth software.</p>
+<p>All of the connectors are in the same place and have the same functionality, and the board can still be run from a 5V micro-USB power adapter. This time round, we’re recommending a 2.5A adapter if you want to connect power-hungry USB devices to the Raspberry Pi.</p>
+<p>Raspberry Pi 3 is available to buy today from our partners <a href="https://www.element14.com/community/community/raspberry-pi" rel="noopener noreferrer" target="_blank">element14</a> and RS Components, and other resellers. You’ll need a recent NOOBS or Raspbian image from our <a href="https://www.raspberrypi.org/downloads/" rel="noopener noreferrer" target="_blank">downloads</a> page. At launch, we are using the same 32-bit Raspbian userland that we use on other Raspberry Pi devices; over the next few months we will investigate whether there is value in moving to 64-bit mode.</p>
+<h2>FAQS</h2>
+<p>We’ll keep updating this list over the next couple of days, but here are a few to get you started.</p>
+<p><b>Are you discontinuing earlier Raspberry Pi models?</b></p>
+<p>No. We have a lot of industrial customers who will want to stick with Raspberry Pi 1 or 2 for the time being. We’ll keep building these models for as long as there’s demand. Raspberry Pi 1 Model B+ and Raspberry Pi 2 Model B will continue to sell for $25 and $35 respectively.</p>
+<p><b>What about Model A+?</b></p>
+<p>Model A+ continues to be the $20 entry-level Raspberry Pi for the time being. We do expect to produce a Raspberry Pi 3 Model A, with the Model A+ form factor, during 2016.</p>
+<p><b>What about the Compute Module?</b></p>
+<p>We expect to introduce a BCM2837-based Compute Module 3 in the next few months. We’ll be demoing Compute Module 3 at our partners’ launch events this morning.</p>
+<p><b>Are you still using VideoCore?</b></p>
+<p>Yes. VideoCore IV 3D is the only publicly documented 3D graphics core for ARM-based SoCs, and we want to make Raspberry Pi more open over time, not less. BCM2837 runs most of the VideoCore IV subsystem at 400MHz and the 3D core at 300MHz (versus 250MHz for earlier devices).</p>
+<p><b>Where does the “10x performance” figure come from?</b></p>
+<p>10x is a typical figure for a multi-threaded CPU benchmark like SysBench. Real-world applications will see a performance increase of between 2.5x (for single-threaded applications) and &gt;20x (for NEON-enabled video codecs).</p>
+<h2>Credits</h2>
+<p>A project like this requires a vast amount of focused work from a large team over an extended period. A partial list of those who made major direct contributions to the BCM2837 chip program, BCM43438 integration and Raspberry Pi 3 follows: Dinesh Abadi, James Adams, Cyrus Afghahi, Aravind Appajappa, Jeff Baer, Sayoni Banerjee, Jonathan Bell, Marc Bright, Srinath Byregowda, Cindy Cao, KK Chan, Nick Chase, Nils Christensson, Dom Cobley, Teodorico Del Rosario Jr, Phil Elwell, Darshan Gopal, Shawn Guo, Gordon Hollingworth, Brand Hsieh, Andy Hulbert, Walter Kho, Gerard Khoo, Yung-Ching Lee, David Lewsey, Xizhe Li, Simon Long, Scott McGregor, James Mills, Baruyr Mirican, Alan Morgan, Kalevi Ratschunas, Paul Rolfe, Matt Rowley, Akshaye Sama, Saran Kumar Seethapathi, Serge Schneider, Shawn Shadburn, Noumaan Shah, Mike Stimson, Stuart Thomson, Roger Thornton, James Tong, James Turner, Luke Wren. If you’re not on this list and think you should be, please let me know, and accept my apologies.</p>
+</div>
+</article></article></main></body></html>

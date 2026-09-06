@@ -1,0 +1,96 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><title>RP2350 A4 stepping and RP2354 announced · source reading copy</title><style>body{margin:0;background:#fff;color:#18212b;font:17px/1.7 Georgia,serif}main{max-width:900px;margin:0 auto;padding:36px 28px 80px}h1,h2,h3,h4{font-family:system-ui,sans-serif;line-height:1.25}h1{font-size:30px}.attribution{font:13px/1.6 system-ui,sans-serif;border-bottom:1px solid #ccd2d8;padding-bottom:22px;margin-bottom:32px;color:#5c6670}a{color:#105c49;overflow-wrap:anywhere}table{border-collapse:collapse;display:block;max-width:100%;overflow-x:auto;margin:24px 0;font-size:14px}th,td{border:1px solid #cbd2d8;padding:8px;min-width:45px;vertical-align:top}pre{white-space:pre-wrap;overflow-wrap:anywhere}blockquote{border-left:3px solid #bbb;padding-left:18px;margin-left:0}@media(max-width:500px){main{padding:24px 16px}h1{font-size:25px}}@media print{main{padding:0}body{font-size:12px}}</style></head><body><main><div class="attribution"><strong>Fundamental Research Desk · V1 public example</strong><br>Publisher: Raspberry Pi<br>Published: 2025-07-29 · Captured: 5 September 2026<br><a href="https://www.raspberrypi.com/news/rp2350-a4-rp2354-and-a-new-hacking-challenge/" target="_blank" rel="noopener noreferrer">Open the publisher source ↗</a><p>A reading copy of a public primary-source article. Publisher wording and tables are retained; scripts, navigation, comments, publisher styling and embedded media are omitted. The live source and original PDF, where available, remain authoritative. This copy contains no AI reconstruction of missing source material.</p></div><h1>RP2350 A4 stepping and RP2354 announced</h1><article><article>
+
+<h1>RP2350 A4, RP2354, and a new Hacking Challenge</h1>
+<div>
+
+
+
+<ul>
+<li>
+            29th Jul 2025        </li>
+<li>
+<a href="https://www.raspberrypi.com/news/author/eben" rel="noopener noreferrer" target="_blank">
+                Eben Upton            </a>
+</li>
+<li>
+<a href="https://www.raspberrypi.com/news/rp2350-a4-rp2354-and-a-new-hacking-challenge/#comments" rel="noopener noreferrer" target="_blank">
+                25 comments            </a>
+</li>
+</ul>
+
+</div>
+
+<div>
+<p>RP2350, our second-generation microcontroller, is very nearly a year old. Since <a href="https://www.raspberrypi.com/news/raspberry-pi-pico-2-our-new-5-microcontroller-board-on-sale-now/" rel="noopener noreferrer" target="_blank">August last year</a>, we’ve sold over half a million <a href="https://www.raspberrypi.com/products/raspberry-pi-pico-2/" rel="noopener noreferrer" target="_blank">Pico 2 and Pico 2 W</a> boards, and <a href="https://www.raspberrypi.com/products/rp2350/" rel="noopener noreferrer" target="_blank">RP2350 itself</a> has found its way into countless third-party products, from <a href="https://4dsystems.com.au/products/gen4-rp2350-series/" rel="noopener noreferrer" target="_blank">secure displays</a> to <a href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html?utm_source=partner&amp;utm_medium=raspberrypi" rel="noopener noreferrer" target="_blank">development boards</a> to <a href="https://www.thisisnotrocketscience.nl/eurorack/bopp_n_steve/" rel="noopener noreferrer" target="_blank">synthesisers</a>.</p>
+<p>Like any silicon device, RP2350 wasn’t perfect on day one. The launch stepping, designated A2, is affected by a number of errata, including an error in the GPIO pad design which prevents pads from properly going into a high-impedance state (Erratum 9), and a number of security issues identified by participants in our <a href="https://www.raspberrypi.com/news/security-through-transparency-rp2350-hacking-challenge-results-are-in/" rel="noopener noreferrer" target="_blank">RP2350 Hacking Challenge</a>. Today, we’re happy to announce the immediate availability of a new A4 stepping, which addresses the vast majority of these issues.</p>
+<div></div>
+<div>
+
+</div>
+<div></div>
+<p>To coincide with the availability of the A4 stepping, we’re also launching RP2354: pin-compatible variants of the 60-pin RP2350A and 80-pin RP2350B parts with 2MB of flash memory in-package. Each RP2354 part costs just 20 cents more than the equivalent RP2350 part.</p>
+<p>And finally, we have <a href="https://github.com/raspberrypi/rp2350_hacking_challenge_2" rel="noopener noreferrer" target="_blank">another RP2350 Hacking Challenge</a>, offering a $20,000 prize for a practical side-channel attack on the power-hardened AES library that underpins our decrypting bootloader.</p>
+<h2>What is fixed in A4?</h2>
+<p>Firstly, and most importantly for general users, we’ve fixed Erratum 9. A small tweak was applied to the pad macro to eliminate the undesirable leakage in the high side of the pad; this leakage gives rise to the large negative-going excursion in the current-against-voltage trace for A2 below. As a result, external resistors are no longer required to pull inputs low, though they may safely be retained in existing designs.</p>
+<div></div>
+<div>
+
+</div>
+<div></div>
+<p>Errata 20, 21 and 24 are boot ROM security vulnerabilities discovered in the course of the RP2350 Hacking Challenge. These have been fixed in the A4 boot ROM, which, in addition, implements a variety of new defensive strategies to reduce the likelihood of future exploits. We have also taken this opportunity to fix a number of minor functional errata in the boot ROM.</p>
+<p>Erratum 16 is a security vulnerability, again discovered in the course of the RP2350 Hacking Challenge, which relates to the behaviour of the OTP when power is removed during a read operation. This has been fixed through changes to the wrapper circuitry surrounding the OTP macro.</p>
+<p>Erratum 3, which relates to the behaviour of the GPIO_NSMASK registers on 60-pin RP235x parts, has also been fixed.</p>
+<h2>What isn’t fixed in A4?</h2>
+<p>One of the <a href="https://www.raspberrypi.com/news/security-through-transparency-rp2350-hacking-challenge-results-are-in/" rel="noopener noreferrer" target="_blank">winners</a> of the Hacking Challenge exposed a vulnerability in the OTP bit array itself. Using a technique called Passive Voltage Contrast, they were able to painstakingly, and at significant expense, read out the bitwise OR of pairs of adjacent bits stored in the OTP; in principle it may be possible to extend this attack to retrieve the complete contents of the OTP.</p>
+<p>This vulnerability is not fixed in the A4 stepping. An upcoming application note will describe how to store secrets in OTP so as to mitigate both the current vulnerability and a hypothetical future attack which can achieve complete readback.</p>
+<p>We have not fixed a number of other non-security errata, for which workarounds exist, and where a fix would require complete reimplementation of the design.</p>
+<h2>Anatomy of a metal spin</h2>
+<p>The A4 stepping is what we call a <em>metal spin</em>: the functional changes, including the updated boot ROM, are implemented by modifying some of the layers of wiring that connect the gates in the design. This visualisation shows all the locations in which A4 differs from A2; the dense block of changes at the bottom of the die implements the updated boot ROM.</p>
+<div></div>
+<div>
+
+</div>
+<div></div>
+<p>Zooming in, here is the implementation of an individual fix (in this case, part of the OTP security hardening required to address Erratum 16).</p>
+<div></div>
+<div>
+
+</div>
+<div></div>
+<h2>Frequently asked questions</h2>
+<p><strong>How do I know whether I have an A2 or an A4?</strong></p>
+<p>The stepping identifier can be found on the top of the package, as shown below. </p>
+<div></div>
+<div>
+
+</div>
+<div></div>
+<p><strong>Is A4 software-compatible with A2?</strong></p>
+<p>Yes. We have made a few minor changes to version 2.2.0 of the <a href="https://github.com/raspberrypi/pico-sdk" rel="noopener noreferrer" target="_blank">Pico SDK</a> and to <a href="https://github.com/raspberrypi/picotool" rel="noopener noreferrer" target="_blank">Picotool</a> to support the A4 stepping.</p>
+<p><strong>Will you EOL the A2 stepping?</strong></p>
+<p>We have already ceased production of A2, moved all production to A4, and withdrawn the remaining inventory of A2 from channel. A4 is a drop-in replacement for A2, and customers should not experience any issues migrating to A4.</p>
+<p><strong>What happened to A3?</strong></p>
+<p>A3 was an intermediate stepping used to qualify a subset of the fixes present in the A4 stepping.</p>
+<p><strong>Will there be a PCN in PIP?</strong></p>
+<p>You can find the product change notice for the A2 to A4 transition <a href="https://pip.raspberrypi.com/categories/1263-pcn/documents/RP-008771-CC/RP235x-A4-stepping-PCN.pdf" rel="noopener noreferrer" target="_blank">here</a>.</p>
+<p><strong>Will Pico 2 products switch to A4?</strong></p>
+<p>Eventually all Pico 2 products will use the A4 stepping. While the A3 stepping will not be made available to silicon customers, approximately 30,000 units of A3 inventory will be used to build Pico 2 and Pico 2 W products.</p>
+<p><strong>Did you change the pinout or package design with A4?</strong></p>
+<p>No: the A4 stepping is only an update to the metal layers of the RP2350 die.</p>
+<p><strong>Do I still need to use the Abracon polarised inductor and Abracon crystal with A4?</strong></p>
+<p>Yes: please keep following our <a href="https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf" rel="noopener noreferrer" target="_blank">hardware design guide</a> and <a href="https://datasheets.raspberrypi.com/rp2350/Minimal-KiCAD.zip" rel="noopener noreferrer" target="_blank">reference BOM/layout</a>.</p>
+<p><strong>Will there be an A5?</strong></p>
+<p>We have no current plans for an A5 stepping. Over time, it is possible that more security vulnerabilities or functional issues will be found, at which point we will react appropriately.</p>
+<h2>RP2354: stacked flash for smaller-footprint applications</h2>
+<p>Our microcontrollers have always relied on external flash memory, connected over a QSPI bus, for non-volatile storage. While using an external package maximises capacity and vendor flexibility for our customers, that flexibility comes at a cost in sourcing effort and PCB area. RP2354 stacks a Winbond 16Mbit (2MB) flash die in-package, providing a simple solution for customers who require a modest amount of storage at an incremental cost of $0.20 per unit.</p>
+<p>The complete price structure for our microcontroller products is summarised in the table below. 7-inch reels of each product contain 500 units; 13-inch reels contain either 3,400 units (RP2040, RP235xA) or 2,500 units (RP235xB).</p>
+<table><tbody><tr><td></td><td><strong>Single unit</strong></td><td><strong>7-inch reel</strong></td><td><strong>13-inch reel</strong></td></tr><tr><td><strong>RP2040</strong></td><td>$1.00</td><td>$0.80</td><td>$0.70</td></tr><tr><td><strong>RP2350A</strong></td><td>$1.10</td><td>$0.90</td><td>$0.80</td></tr><tr><td><strong>RP2350B</strong></td><td>$1.20</td><td>$1.00</td><td>$0.90</td></tr><tr><td><strong>RP2354A</strong></td><td>$1.30</td><td>$1.10</td><td>$1.00</td></tr><tr><td><strong>RP2354B</strong></td><td>$1.40</td><td>$1.20</td><td>$1.10</td></tr></tbody></table>
+<div></div>
+<h2>RP2350 Hacking Challenge redux</h2>
+<p>Last year’s RP2350 Hacking Challenge was so much fun that we thought we should celebrate the launch of A4 with another one. This time we’re <a href="https://github.com/raspberrypi/rp2350_hacking_challenge_2" rel="noopener noreferrer" target="_blank">challenging you to find a practical side-channel attack</a> on our <a href="https://github.com/raspberrypi/rp2350_hacking_challenge_2/blob/main/aes_report_monospace.md" rel="noopener noreferrer" target="_blank">hardened implementation of the AES cipher</a>, which is used to decrypt firmware images into internal SRAM at boot time.</p>
+<p>Once again, we’ve teamed up with Thomas “<a href="https://stacksmashing.net/" rel="noopener noreferrer" target="_blank">stacksmashing</a>” Roth and the <a href="https://www.hextree.io/" rel="noopener noreferrer" target="_blank">Hextree.io</a> team to set the <a href="https://github.com/raspberrypi/rp2350_hacking_challenge_2" rel="noopener noreferrer" target="_blank">rules of the contest</a>.</p>
+<h2>One more thing</h2>
+<p>Those of you interfacing RP2350 to retro computer hardware will be pleased to hear that, after an extensive qualification campaign, RP2350 is now officially 5V tolerant!</p>
+<p>Just make sure to keep IOVDD powered when 5V is applied to any GPIO pad, otherwise the pad will be damaged. And be sure to read the relevant sections in the updated <a href="https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf" rel="noopener noreferrer" target="_blank">datasheet</a>.</p>
+</div>
+</article></article></main></body></html>

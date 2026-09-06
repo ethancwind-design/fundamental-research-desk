@@ -1,0 +1,151 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><title>LiteRT and Gemma technical integration · source reading copy</title><style>body{margin:0;background:#fff;color:#18212b;font:17px/1.7 Georgia,serif}main{max-width:900px;margin:0 auto;padding:36px 28px 80px}h1,h2,h3,h4{font-family:system-ui,sans-serif;line-height:1.25}h1{font-size:30px}.attribution{font:13px/1.6 system-ui,sans-serif;border-bottom:1px solid #ccd2d8;padding-bottom:22px;margin-bottom:32px;color:#5c6670}a{color:#105c49;overflow-wrap:anywhere}table{border-collapse:collapse;display:block;max-width:100%;overflow-x:auto;margin:24px 0;font-size:14px}th,td{border:1px solid #cbd2d8;padding:8px;min-width:45px;vertical-align:top}pre{white-space:pre-wrap;overflow-wrap:anywhere}blockquote{border-left:3px solid #bbb;padding-left:18px;margin-left:0}@media(max-width:500px){main{padding:24px 16px}h1{font-size:25px}}@media print{main{padding:0}body{font-size:12px}}</style></head><body><main><div class="attribution"><strong>Fundamental Research Desk · V1 public example</strong><br>Publisher: Raspberry Pi<br>Published: 2026-08-11 · Captured: 5 September 2026<br><a href="https://www.raspberrypi.com/news/mastering-edge-ai-on-raspberry-pi-with-litert-and-gemma/" target="_blank" rel="noopener noreferrer">Open the publisher source ↗</a><p>A reading copy of a public primary-source article. Publisher wording and tables are retained; scripts, navigation, comments, publisher styling and embedded media are omitted. The live source and original PDF, where available, remain authoritative. This copy contains no AI reconstruction of missing source material.</p></div><h1>LiteRT and Gemma technical integration</h1><article><article>
+
+<h1>Mastering edge AI on Raspberry Pi with LiteRT and Gemma</h1>
+<div>
+
+
+
+<ul>
+<li>
+            11th Aug 2026        </li>
+<li>
+<a href="https://www.raspberrypi.com/news/author/naush-patuck" rel="noopener noreferrer" target="_blank">
+                Naush Patuck            </a>
+</li>
+<li>
+<a href="https://www.raspberrypi.com/news/mastering-edge-ai-on-raspberry-pi-with-litert-and-gemma/#comments" rel="noopener noreferrer" target="_blank">
+                4 comments            </a>
+</li>
+</ul>
+
+</div>
+
+<div>
+<p><strong><em>Our friends at Google have been busy working on improving LiteRT performance on the Raspberry Pi platform. We are pleased to share this work with you now, providing a robust framework for your general-purpose AI applications.</em></strong></p>
+<p><strong><em>With special thanks to Google software engineers Lu Wang and Terry Heo, and <strong><em>Igalia</em></strong></em></strong> <strong><em><strong><em>graphics software engineer</em></strong> José María Casanova.</em></strong></p>
+<div></div>
+<div>
+
+</div>
+<p>Imagine building a fully autonomous robot that can see, hear, and react to its environment in real time, completely offline on a single compact device like a <a href="https://www.raspberrypi.com/" rel="noopener noreferrer" target="_blank">Raspberry Pi</a>. Edge AI unlocks this exact autonomy. It enables developers to build highly secure, self-contained systems — like intelligent robots and local AI agents — with zero cloud dependencies, ultra-low latency, and total data privacy.</p>
+<p>We’ve made running edge AI on Raspberry Pi a breeze with <a href="https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/" rel="noopener noreferrer" target="_blank">LiteRT</a>, Google’s high-performance, production-proven, on-device inference runtime. LiteRT allows you to seamlessly deploy everything from classical ML models to state-of-the-art LLMs right out of the box. By delivering optimized execution and hyper-efficient memory usage on both the CPU and GPU, LiteRT maximizes your Raspberry Pi’s full computing potential.</p>
+<div></div>
+<div>
+<p>Media in original article: <a href="https://www.youtube-nocookie.com/embed/ajC47RqaYec?feature=oembed" rel="noopener noreferrer" target="_blank">Reachy Mini reacts with responses and movement, powered by Gemma and LiteRT on Raspberry Pi 5</a></p>
+</div>Reachy Mini reacts with responses and movement, powered by Gemma and LiteRT on Raspberry Pi 5
+<div></div>
+<p>This hardware–software synergy shines brightest when paired with <a href="https://deepmind.google/models/gemma/" rel="noopener noreferrer" target="_blank">Gemma</a>, Google’s family of lightweight open models. To show you what’s possible, we’ll demonstrate how running Gemma and LiteRT on a <a href="https://www.raspberrypi.com/products/raspberry-pi-5/" rel="noopener noreferrer" target="_blank">Raspberry Pi 5</a> can power the Reachy Mini robot to perceive and react to its environment entirely locally in real time. Read on to get started with your own deployment.</p>
+<h1>Discover the agentic capability of Gemma</h1>
+<p>Gemma models are well suited for building autonomous agents, smart cameras, and social robots that can reason and execute complex, multi-step workflows directly on your Raspberry Pi. To accommodate different hardware constraints, the Gemma family of models provides several highly efficient options:</p>
+<ul>
+<li><a href="https://huggingface.co/litert-community/gemma-3-270m-it" rel="noopener noreferrer" target="_blank">Gemma 3 270M</a>: A hyper-efficient and compact base model designed for task-specific post fine-tuning, enabling high-speed, low-latency features like sentiment analysis or entity extraction in resource-constrained environments.</li>
+<li><a href="https://huggingface.co/litert-community/embeddinggemma-300m" rel="noopener noreferrer" target="_blank">EmbeddingGemma 300M</a>: A state-of-the-art text embedding model that produces high-quality embeddings on-device, great for Retrieval Augmented Generation (RAG), semantic search, and classification.</li>
+<li><a href="https://huggingface.co/litert-community/Gemma3-1B-IT" rel="noopener noreferrer" target="_blank">Gemma 3 1B</a>: A lightweight and multilingual text-only model that balances compact size with strong generative capabilities, making it ideal for a wide range of on-device reasoning, summarization, and content creation tasks.</li>
+<li><a href="https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm" rel="noopener noreferrer" target="_blank">Gemma 4 E2B</a>: Tailored specifically for mobile and tight edge environments, it features memory-mapped per-layer embeddings and is ideal for continuous monitoring, fast text/image/audio inference, and edge-based speech processing where saving RAM is absolutely critical.</li>
+<li><a href="https://huggingface.co/litert-community/gemma-4-E4B-it-litert-lm" rel="noopener noreferrer" target="_blank">Gemma 4 E4B</a>: The sweet spot for performance and size. This model delivers noticeably stronger reasoning capabilities and frontier-level edge performance while remaining compact. It is the perfect choice for complex multi-step planning without overwhelming the Raspberry Pi’s resources.</li>
+</ul>
+<div></div>
+<h1>Gemma performance on Raspberry Pi’s CPU</h1>
+<p>Through <a href="https://developers.google.com/edge/litert-lm" rel="noopener noreferrer" target="_blank">LiteRT-LM</a>, a specialized orchestration layer on top of LiteRT, developers can seamlessly deploy Gemma right out of the box. Under the hood, <strong>sophisticated CPU acceleration via LiteRT and </strong><a href="https://github.com/google/xnnpack" rel="noopener noreferrer" target="_blank"><strong>XNNPACK</strong></a> ensures the Gemma family of models is highly optimized for resource efficiency and low-latency execution directly on the Raspberry Pi.</p>
+<table><thead><tr><th><strong>Model</strong></th><th><strong>Framework (CPU)</strong></th><th><strong>Prefill </strong><strong>(tokens/sec)</strong></th><th><strong>Decode (tokens/sec)</strong></th><th><strong>Peak memory (MB)</strong></th></tr></thead><tbody><tr><td rowspan="2"><strong>Gemma 4 E2B</strong></td><td><strong>LiteRT-LM (QAT)</strong></td><td><strong>99</strong></td><td><strong>9</strong></td><td><strong>1432</strong></td></tr><tr><td>llama.cpp (Q4_0)</td><td>24</td><td>4</td><td>4406</td></tr></tbody></table>
+<ul>
+<li>Hardware: Raspberry Pi 5 (8 GB RAM variant)</li>
+<li>Benchmark setup: 1024 prefill tokens and 256 decode tokens; the CPU runs with four threads</li>
+<li>llama.cpp is benchmarked using <code>llama-bench</code> with <code>gemma-4-E2B-it-Q4_0.gguf</code></li>
+<li>LiteRT-LM is benchmarked using <code>litert lm benchmark</code> with <code>gemma-4-E2B-it.litertlm</code></li>
+</ul>
+<div></div>
+<p>On a Raspberry Pi 5, LiteRT-LM delivers robust performance for Gemma 4 E2B, achieving 99 tokens/sec for prefill and 9 tokens/sec for decode, all while maintaining a remarkably low peak memory footprint of just 1432 MB. This <strong>brings Gemma’s highly responsive, general-purpose intelligence to Raspberry Pi</strong>. </p>
+<p>Thanks to Gemma 4 E2B’s highly efficient tokenizer, which packs more text into fewer tokens (averaging ~4.2 characters per token), LiteRT-LM achieves an impressive end-to-end generation speed of ~27.3 characters per second, roughly 300 words per minute (wpm), in the Reachy Mini voice demo. <strong>This throughput makes Gemma 4 E2B excellent for real-time speech and translation tasks</strong>, delivering text at twice the speed of normal human speech (~150 wpm).</p>
+<p>Explore more ready-to-use open models to run on Raspberry Pi from the <a href="https://huggingface.co/litert-community" rel="noopener noreferrer" target="_blank">LiteRT Hugging Face Community</a>.</p>
+<h1>Execute on Raspberry Pi’s GPU with LiteRT</h1>
+<p>On Raspberry Pi 5, the quad-core Arm Cortex-A76 CPU is a raw computing powerhouse, delivering ~153.6 GFLOPS (FP32) and up to ~2.0 TOPS (INT8). In comparison, the integrated Broadcom VideoCore VII GPU is clocked at 800 MHz and offers a peak of ~76.8 GFLOPS (FP32) and ~0.24 TOPS (INT8).</p>
+<p>While the CPU possesses a massive capacity advantage, the GPU introduces <strong>heterogeneous parallel execution</strong>, a paradigm critical for real-time edge applications. Rather than saturating the CPU, developers can delegate tasks across both processors to optimize overall system and thermal efficiency. For example, by offloading continuous vision or audio models to the VideoCore VII GPU, it preserves high-priority CPU cycles for overall system monitoring, pipeline orchestration, or computationally demanding LLM inference.</p>
+<p>As such, we have enabled GPU inference on Raspberry Pi<strong> </strong>5 with<strong> LiteRT’s WebGPU (Vulkan) backend via ML Drift</strong>. This integration allows you to run a wide range of computer vision, audio, and embedding models directly from the <a href="https://huggingface.co/litert-community" rel="noopener noreferrer" target="_blank">LiteRT Hugging Face Community</a> with exceptional, low-latency performance. This includes seamless support for popular <a href="https://developers.google.com/edge/mediapipe/solutions/guide#available_solutions" rel="noopener noreferrer" target="_blank">MediaPipe models</a>, <a href="https://docs.ultralytics.com/integrations/litert" rel="noopener noreferrer" target="_blank">Ultralytics YOLO models</a>, <a href="https://huggingface.co/litert-community/moonshine-tiny/tree/main" rel="noopener noreferrer" target="_blank">Moonshine</a>, and much more.</p>
+<div></div>
+<div>
+<p>Media in original article: <a href="https://www.youtube.com/embed/LwyDbV5olJw?feature=oembed" rel="noopener noreferrer" target="_blank">Real-time object detection with the YOLO26n model running on Raspberry Pi 5 with LiteRT</a></p>
+</div>Real-time object detection with the YOLO26n model running on Raspberry Pi 5 with LiteRT; get started with the <a href="https://docs.ultralytics.com/modes/predict#streaming-source-for-loop" rel="noopener noreferrer" target="_blank">sample code</a> from the YOLO guide
+<div></div>
+<p>The table below demonstrates the CPU and GPU latency of running classic computer vision and segmentation models via LiteRT:</p>
+<table><tbody><tr><td><strong>Model</strong></td><td><strong>Task</strong></td><td><strong>Input size</strong></td><td><strong>CPU latency (ms)</strong></td><td><strong>GPU latency (ms)</strong></td></tr><tr><td><a href="https://developers.google.com/edge/mediapipe/solutions/vision/image_segmenter#models" rel="noopener noreferrer" target="_blank">MediaPipe Selfie Segmenter</a></td><td>Segmentation</td><td>256 × 256</td><td>7.88</td><td>26.36</td></tr><tr><td><a href="https://docs.ultralytics.com/integrations/litert" rel="noopener noreferrer" target="_blank">YOLO26n</a></td><td>Object detection</td><td>640 × 640</td><td>101.26</td><td>375.73</td></tr><tr><td><a href="https://huggingface.co/litert-community/efficientnet_b0" rel="noopener noreferrer" target="_blank">EfficientNet-Lite0</a></td><td>Image classification</td><td>224 × 224</td><td>29.15</td><td>87.85</td></tr><tr><td><a href="https://huggingface.co/litert-community/moonshine-tiny/tree/main" rel="noopener noreferrer" target="_blank">Moonshine-tiny</a></td><td>Speech recognition</td><td>5 sec</td><td>148.67</td><td>409.03</td></tr></tbody></table>
+<ul>
+<li>Hardware: Raspberry Pi 5 (8 GB RAM variant)</li>
+<li>LiteRT CPU runs with four threads</li>
+<li>LiteRT GPU running with WebGPU (Vulkan) on updated Mesa V3DV Vulkan drivers</li>
+</ul>
+<div></div>
+<h1>Deep dive: Reachy Mini pipeline powered by LiteRT</h1>
+<p>The Reachy Mini pipeline is a powerful showcase of low-latency, real-time edge AI inference running entirely on Raspberry Pi 5. By leveraging LiteRT, the system splits intensive vision and language workloads into a concurrent, dual-processing architecture across the CPU and GPU.</p>
+<div></div>
+<div>
+
+</div>
+<p>Here is how the parallel architecture works under the hood to ensure seamless interactions:</p>
+<ul>
+<li><strong>Object detection (YOLO on GPU)</strong>: Camera frames are streamed to the Raspberry Pi, where a YOLO detector (<code>yolox-tiny</code>) runs continuously on the GPU, avoiding resource contention and freeing up the CPU.</li>
+<li><strong>Speech recognition (Moonshine on CPU)</strong>: When the user speaks, the ASR component transcribes the audio into text directly on the CPU.</li>
+<li><strong>Reasoning and action (Gemma 4 E2B on CPU)</strong>: The Gemma 4 E2B model processes the resulting transcript alongside the latest visual metadata to generate low-latency streaming responses, such as speech replies and physical robotic gestures.</li>
+<li><strong>Text-to-speech (TTS on CPU)</strong>: The TTS component synthesizes the generated text into audio in streaming. The system streams the synthesized voice back to the Reachy Mini robot.</li>
+</ul>
+<div></div>
+<p>See the full source code from the Reachy demo in the <a href="https://github.com/google-ai-edge/litert-samples" rel="noopener noreferrer" target="_blank">LiteRT Samples Github repo</a><em><strong>.</strong></em></p>
+<h1>Agentic coding with LiteRT on Raspberry Pi</h1>
+<p>LiteRT provides a comprehensive suite of tools that covers the entire development cycle: conversion, quantization, benchmarking, and inference. For a fast, frictionless setup, the most straightforward approach is to use the <a href="https://github.com/google-ai-edge/LiteRT-CLI" rel="noopener noreferrer" target="_blank">LiteRT CLI</a> tool. Rather than requiring developers or coding agents to manually manage multiple independent libraries, the LiteRT CLI aggregates core edge workflows into a single, unified command set.</p>
+<div></div>
+<div>
+<p>Media in original article: <a href="https://www.youtube-nocookie.com/embed/EZVfPhYIBcs?feature=oembed" rel="noopener noreferrer" target="_blank">Streamline your development cycle with LiteRT CLI: convert, quantize, benchmark, and inference</a></p>
+</div>Streamline your development cycle with LiteRT CLI: conversion, quantization, benchmarking, and inference
+<div></div>
+<p>You can now supercharge your development cycle by adding the <a href="https://github.com/google-ai-edge/LiteRT-CLI/blob/main/.agents/skills/litert_cli/SKILL.md" rel="noopener noreferrer" target="_blank">LiteRT CLI skill</a> and other <a href="https://github.com/google-ai-edge/litert-samples/tree/main/skills" rel="noopener noreferrer" target="_blank">advanced LiteRT skills</a> into your AI coding agent, such as <a href="https://antigravity.google/" rel="noopener noreferrer" target="_blank">Google Antigravity</a>. This empowers agents to autonomously orchestrate and execute complex, multi-stage machine learning workflows on your behalf. For example, you can easily build your own voice translator completely offline on a Raspberry Pi, like the Gemma Translator shown below. </p>
+<div></div>
+<div>
+Explore the complete implementation details in the <a href="https://github.com/google-gemma/gemma-translator" rel="noopener noreferrer" target="_blank">Gemma Translator GitHub repo</a>
+</div>
+<h2>An ultra-lean binary footprint for IoT devices</h2>
+<p>For resource-constrained IoT devices, minimizing storage and memory overhead is critical. Without special optimization, generic AI runtimes often bundle heavy desktop or server dependencies. In contrast, LiteRT is engineered specifically for on-device deployment, maintaining an exceptionally lean and modular distribution.</p>
+<p>The table below compares the download footprint required to run LLM inference on a Raspberry Pi (Arm64 Linux).</p>
+<table><tbody><tr><td><strong>Tool</strong></td><td><strong>Download size</strong></td><td><strong>Architecture and dependency</strong></td></tr><tr><td><strong>LiteRT CLI </strong>(with LLM inference)</td><td>~25 MB</td><td><strong>Modular and on-demand</strong>: A lightweight pure-Python CLI frontend (~100 KB) that dynamically installs only the specific runtime modules (e.g. inference or conversion) optimized for the target hardware.</td></tr><tr><td><strong>Ollama</strong></td><td>~1.44 GB</td><td><strong>Monolithic</strong>: A single, pre-compiled binary that statically bundles all execution runtimes and heavy server-class acceleration drivers, regardless of the actual capabilities of the target host.</td></tr></tbody></table>
+<h2>Running your first model</h2>
+<p>You can install the LiteRT CLI and run your first model on a Raspberry Pi 5 with just a few simple commands.</p>
+<p><strong>1. Install the LiteRT CLI</strong></p>
+<p>To get started, install the LiteRT CLI via <code>pip</code> (ideally within a virtual environment):</p>
+<pre><code>pip install litert-cli</code></pre>
+<p><strong>2. Run the model </strong></p>
+<p>Download and run any compatible model directly from the <a href="https://huggingface.co/litert-community" rel="noopener noreferrer" target="_blank">LiteRT Hugging Face Community</a>. The code snippet below demonstrates how to execute Gemma 4 E2B (e.g. <a href="https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm" rel="noopener noreferrer" target="_blank">gemma-4-E2B-it-litert-lm</a>) on Raspberry Pi 5.</p>
+<p>Run the model by providing your Hugging Face authentication token:</p>
+<pre><code>export HUGGING_FACE_HUB_TOKEN=&lt;your_hugging_face_token_here&gt;
+litert lm run \
+  --from-huggingface-repo=litert-community/gemma-4-E2B-it-litert-lm \
+  gemma-4-E2B-it.litertlm \
+  --attachment=image.jpg \
+  --prompt="You are Reachy Mini. Identify the main object in front of you, state its location (Left/Right/Center), and suggest one arm action in 10 words or less."</code></pre>
+<h1>What’s next?</h1>
+<p>We are excited to share that LiteRT integration and Gemma models are coming soon to <a href="https://hailo.ai/products/ai-accelerators/hailo-10h-ai-accelerator/" rel="noopener noreferrer" target="_blank">Hailo AI accelerators</a>! This update will allow you to seamlessly offload model inference to the Raspberry Pi AI HAT+ and AI HAT+ 2, delivering massive hardware acceleration benefits through the exact same LiteRT workflows you use today.</p>
+<p>Explore our resources and start your journey with LiteRT:</p>
+<ul>
+<li><strong>Official documentation</strong>: Access installation guides, API references, and quick-start tutorials on the <a href="https://ai.google.dev/edge/litert" rel="noopener noreferrer" target="_blank">LiteRT Developer Site</a>.</li>
+<li><strong>GitHub repos</strong>: Find the latest source code, implementation details, and updates on the <a href="https://github.com/google-ai-edge/litert" rel="noopener noreferrer" target="_blank">LiteRT</a> and <a href="https://github.com/google-ai-edge/LiteRT-LM?tab=readme-ov-file" rel="noopener noreferrer" target="_blank">LiteRT-LM</a> GitHub repos.</li>
+<li><strong>Samples and templates</strong>: Check out the <a href="https://github.com/google-ai-edge/litert-samples" rel="noopener noreferrer" target="_blank">LiteRT-Samples</a> GitHub repo for reference code. Kick-start your own application using the <a href="https://github.com/google-ai-edge/gallery" rel="noopener noreferrer" target="_blank">Google AI Edge Gallery app</a>.</li>
+<li><strong>Ready-to-use models</strong>: Download optimized, open-weight models like the lightweight and powerful <a href="https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm" rel="noopener noreferrer" target="_blank">Gemma 4 E2B</a> directly from the <a href="https://huggingface.co/litert-community" rel="noopener noreferrer" target="_blank">LiteRT Hugging Face Community</a>.</li>
+</ul>
+<div></div>
+<p>We value your input. Please share your thoughts, feedback, or feature requests by opening an issue on our <a href="https://github.com/google-ai-edge/LiteRT/issues" rel="noopener noreferrer" target="_blank">GitHub issue tracker</a>. Share your cool Raspberry Pi + LiteRT + Gemma projects with <a href="https://x.com/googlegemma" rel="noopener noreferrer" target="_blank">@googlegemma</a>. We can’t wait to see what you build!</p>
+<h1>Acknowledgements</h1>
+<p><strong>Google</strong>: Changming Sun, Chintan Parikh, Cormac Brick, Daisuke Majima, Dillon Sharlet, Erin Walsh, Frank Barchard, Glenn Cameron, Ian Ballantyne, Jingjiang Li, Jun Jiang, Kimish Patel, Lu Wang, Matthias Grundmann, Rodney Witcher, Sachin Kotwani, Sasha Denisov, Scott Loftin, Shuangfeng Li, Somdatta Banerjee, Terry (Woncheol) Heo, Volodymyr Kysenko, Weiyi Wang, Yi-Chun Kuo, Yu-hui Chen, and the gTech team</p>
+<p><strong>Raspberry Pi</strong>: Ashley Whittaker, Naushir Patuck, and Sarah Cunningham</p>
+<p><strong>Igalia</strong>: José María Casanova</p>
+<p><strong>Hailo</strong>: Eldad Rubinstein</p>
+<p><strong>Ultralytics</strong>: Francesco Mattioli, Lakshantha Dissanayake, and Onuralp Sezer</p>
+<p><strong>Moonshine AI</strong>: Pete Warden</p>
+<div></div>
+<h1>Appendix</h1>
+<table><thead><tr><th><strong>Model</strong></th><th><strong>Info density (chars/tok)</strong></th><th><strong>Framework (CPU)</strong></th><th><strong>Model size (MB)</strong></th><th><strong>Prefill (tokens/sec)</strong></th><th><strong>Decode (tokens/sec)</strong></th><th><strong>Generation speed (chars/sec)</strong></th><th><strong>Peak memory (MB)</strong></th></tr></thead><tbody><tr><td rowspan="2"><strong>Gemma 4 E2B</strong></td><td rowspan="2">~4.2</td><td><strong>LiteRT-LM</strong></td><td><strong>2468</strong></td><td><strong>99</strong></td><td><strong>9</strong></td><td><strong>~27.3</strong></td><td><strong>1432 MB</strong></td></tr><tr><td>llama.cpp</td><td>2709</td><td>58</td><td>7</td><td>~12.8</td><td>4406 MB</td></tr><tr><td rowspan="2"><strong>Gemma 3 270M</strong></td><td rowspan="2">~2.8</td><td>LiteRT-LM</td><td>278</td><td>433.17</td><td>22.58</td><td>~34.4</td><td>680 MB</td></tr><tr><td>llama.cpp</td><td>278</td><td>462</td><td>39</td><td>~49.2</td><td>685 MB</td></tr></tbody></table>
+<ul>
+<li><a href="https://huggingface.co/ggml-org/gemma-4-E2B-it-GGUF" rel="noopener noreferrer" target="_blank">gemma-4-E2B-it-Q4_0.gguf</a></li>
+<li><a href="https://huggingface.co/ggml-org/gemma-3-270m-it-GGUF/blob/main/gemma-3-270m-it-Q8_0.gguf" rel="noopener noreferrer" target="_blank">gemma-3-270m-it-Q8_0.gguf</a></li>
+</ul>
+<div></div>
+<p>When running Gemma 3 270M, LiteRT-LM delivers impressively fast performance of 433 prefill tokens/sec and 23 decode tokens/sec. This speed makes it exceptionally well suited for low-latency, real-time applications, such as the fluid interactive behaviors required by the Reachy Mini robot.</p>
+</div>
+</article></article></main></body></html>

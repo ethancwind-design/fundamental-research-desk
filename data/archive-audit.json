@@ -1,0 +1,113 @@
+{
+  "audit_status": "V1 public release; research-source snapshot 5 September 2026",
+  "scope": "Collection and access audit only. No investment conclusions or completed fieldwork.",
+  "honest_display_language": "Four third-party transcript references are linked to their publishers. Two were observed as management prepared remarks without Q&A; two carried a publisher preview notice. No transcript text is hosted or indexed here. Zero complete reporting-call transcripts and zero caption files were retrieved. Official issuer releases, slides and replay links remain available.",
+  "required_transcripts": [
+    {
+      "event_date": "2024-09-24",
+      "event_period": "H1 2024",
+      "partial_source_id": "v2-transcript-partial-2024-09-24",
+      "publisher_url": "https://earningscalls.dev/transcripts/raspberry-pi-holdings-plc_rpi_earnings_call_transcript_2024-09-24",
+      "status": "Publisher explicitly labels this page a first-half preview, although the visible speaker text includes Q&A and a closing. Completeness is therefore unverified; do not count as a complete call transcript.",
+      "full_transcript_retrieved": false,
+      "hosted_transcript_text": false,
+      "captions_retrieved": false
+    },
+    {
+      "event_date": "2025-04-02",
+      "event_period": "FY2024",
+      "partial_source_id": "v2-transcript-partial-2025-04-02",
+      "publisher_url": "https://earningscalls.dev/transcripts/raspberry-pi-holdings-plc_rpi_earnings_call_transcript_2025-04-02",
+      "status": "Visible source contains three management speaker segments and prepared remarks; no analyst or audience Q&A is present. Do not count as a complete call transcript.",
+      "full_transcript_retrieved": false,
+      "hosted_transcript_text": false,
+      "captions_retrieved": false
+    },
+    {
+      "event_date": "2025-09-23",
+      "event_period": "H1 2025",
+      "partial_source_id": "v2-transcript-partial-2025-09-23",
+      "publisher_url": "https://earningscalls.dev/transcripts/raspberry-pi-holdings-plc_rpi_earnings_call_transcript_2025-09-23",
+      "status": "Visible source contains three management speaker segments and prepared remarks; no analyst or audience Q&A is present. Do not count as a complete call transcript.",
+      "full_transcript_retrieved": false,
+      "hosted_transcript_text": false,
+      "captions_retrieved": false
+    },
+    {
+      "event_date": "2026-03-31",
+      "event_period": "FY2025",
+      "partial_source_id": "v2-transcript-partial-2026-03-31",
+      "publisher_url": "https://earningscalls.dev/transcripts/raspberry-pi-holdings-plc_rpi_earnings_call_transcript_2026-03-31",
+      "status": "Publisher explicitly labels this page a first-half preview, although the visible speaker text includes Q&A and a closing. Completeness is therefore unverified; do not count as a complete call transcript. This is an afternoon investor presentation, distinct from the morning results presentation. The transcription and the separate AI summary contain numerical discrepancies against issuer disclosures; verify numbers in the official results.",
+      "full_transcript_retrieved": false,
+      "hosted_transcript_text": false,
+      "captions_retrieved": false
+    }
+  ],
+  "provider_attempts": [
+    {
+      "provider": "EarningsCalls.dev",
+      "result": "Four public pages were inspected during the original collection; none establishes a complete certified call transcript. The public release contains links and access observations only.",
+      "files_saved": [],
+      "entitlement_status": "Public previews inspected; full export access not verified"
+    },
+    {
+      "provider": "StockAnalysis / Quartr",
+      "result": "An index listed six events spanning four reporting dates. Detail retrieval failed with HTTP 400. This does not establish a subscription barrier or source absence.",
+      "files_saved": [],
+      "entitlement_status": "Undetermined"
+    },
+    {
+      "provider": "LSEG",
+      "result": "Company discovery did not return before the original request was interrupted. No transcript was retrieved. A timeout does not establish an entitlement denial.",
+      "files_saved": [],
+      "entitlement_status": "Undetermined"
+    },
+    {
+      "provider": "Bigdata.com",
+      "result": "No company transcript request was performed.",
+      "files_saved": [],
+      "entitlement_status": "Not tested"
+    }
+  ],
+  "official_caption_checks": [
+    {
+      "event_date": "2024-09-24",
+      "provider": "BRR Media",
+      "url": "https://stream.brrmedia.co.uk/broadcast/preview/66d1be20085aa7e8aeeefb2b",
+      "outcome": "Initial HTML is a JavaScript application shell. No publicly exposed caption or transcript asset identified in that response.",
+      "caption_files_saved": 0,
+      "scope_limit": "Player execution and authenticated content not inspected."
+    },
+    {
+      "event_date": "2025-04-02",
+      "provider": "Vimeo",
+      "url": "https://vimeo.com/1071810441/d605ba2cad?ts=0&share=copy",
+      "outcome": "Human-verification challenge returned. Retrieval stopped; no bypass attempted.",
+      "caption_files_saved": 0,
+      "scope_limit": "Caption availability remains unverified."
+    },
+    {
+      "event_date": "2025-09-23",
+      "provider": "Vimeo / LSEG Studios",
+      "url": "https://vimeo.com/lsegstudios/download/1121153576/9e071d61b7",
+      "outcome": "Initial HTML is a loading application shell. No caption track URL identified in that response.",
+      "caption_files_saved": 0,
+      "scope_limit": "Dynamic player assets not inspected; no video downloaded."
+    },
+    {
+      "event_date": "2026-03-31",
+      "provider": "LSEG SparkLive",
+      "url": "https://sparklive.lseg.com/RaspberryPi/events/2a6c3b3c-3adc-4b51-8084-18be68fd6f95/raspberry-pi-full-year-results-2025",
+      "outcome": "Initial HTML is an application shell. No caption asset identified in that response.",
+      "caption_files_saved": 0,
+      "scope_limit": "Dynamic player assets not inspected; no video downloaded."
+    }
+  ],
+  "next_actions": [
+    "Retrieve complete, final transcripts through an entitled service or official event provider; confirm event time, speakers and all Q&A.",
+    "Use the official results release and presentation to verify numerical statements.",
+    "Check remaining IPO certification-gated items and cross-venue filings at the terminal."
+  ],
+  "copyright_boundary": "Primary-source documents and inert issuer reading copies are hosted. Third-party transcript previews and publisher article copies are not republished. Public metadata and original prep questions remain."
+}

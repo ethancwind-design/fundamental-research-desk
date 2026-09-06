@@ -1,0 +1,103 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><title>RP2350 security challenge results published · source reading copy</title><style>body{margin:0;background:#fff;color:#18212b;font:17px/1.7 Georgia,serif}main{max-width:900px;margin:0 auto;padding:36px 28px 80px}h1,h2,h3,h4{font-family:system-ui,sans-serif;line-height:1.25}h1{font-size:30px}.attribution{font:13px/1.6 system-ui,sans-serif;border-bottom:1px solid #ccd2d8;padding-bottom:22px;margin-bottom:32px;color:#5c6670}a{color:#105c49;overflow-wrap:anywhere}table{border-collapse:collapse;display:block;max-width:100%;overflow-x:auto;margin:24px 0;font-size:14px}th,td{border:1px solid #cbd2d8;padding:8px;min-width:45px;vertical-align:top}pre{white-space:pre-wrap;overflow-wrap:anywhere}blockquote{border-left:3px solid #bbb;padding-left:18px;margin-left:0}@media(max-width:500px){main{padding:24px 16px}h1{font-size:25px}}@media print{main{padding:0}body{font-size:12px}}</style></head><body><main><div class="attribution"><strong>Fundamental Research Desk · V1 public example</strong><br>Publisher: Raspberry Pi<br>Published: 2025-01-14 · Captured: 5 September 2026<br><a href="https://www.raspberrypi.com/news/security-through-transparency-rp2350-hacking-challenge-results-are-in/" target="_blank" rel="noopener noreferrer">Open the publisher source ↗</a><p>A reading copy of a public primary-source article. Publisher wording and tables are retained; scripts, navigation, comments, publisher styling and embedded media are omitted. The live source and original PDF, where available, remain authoritative. This copy contains no AI reconstruction of missing source material.</p></div><h1>RP2350 security challenge results published</h1><article><article>
+
+<h1>Security through transparency: RP2350 Hacking Challenge results are in</h1>
+<div>
+
+
+
+<ul>
+<li>
+            14th Jan 2025        </li>
+<li>
+<a href="https://www.raspberrypi.com/news/author/eben" rel="noopener noreferrer" target="_blank">
+                Eben Upton            </a>
+</li>
+<li>
+<a href="https://www.raspberrypi.com/news/security-through-transparency-rp2350-hacking-challenge-results-are-in/#comments" rel="noopener noreferrer" target="_blank">
+                21 comments            </a>
+</li>
+</ul>
+
+</div>
+
+<div>
+<p>We <a href="https://www.raspberrypi.com/news/raspberry-pi-pico-2-our-new-5-microcontroller-board-on-sale-now/" rel="noopener noreferrer" target="_blank">launched</a> our second-generation microcontroller, RP2350, in August last year. Building on the success of its predecessor, RP2040, this adds faster processors, more memory, lower power states, and a security model built around Arm TrustZone for Cortex-M. Alongside our own Raspberry Pi Pico 2 board, and numerous partner boards, RP2350 also featured on the <a href="https://defcon.org/" rel="noopener noreferrer" target="_blank">DEF CON</a> badge, designed by <a href="https://www.entropicengineering.com/" rel="noopener noreferrer" target="_blank">Entropic Engineering</a>, with firmware by our friend <a href="https://dmitry.gr/" rel="noopener noreferrer" target="_blank">Dmitry Grinberg</a>.</p>
+<div></div>
+<div>
+<p>Media in original article: <a href="https://www.raspberrypi.com/app/uploads/2024/08/2350-product-shot-high-res-Medium.jpeg" rel="noopener noreferrer" target="_blank">The image shows two RP2350 microcontrollers. The chip on the left features the Raspberry Pi logo, a stylised raspberry with a leaf. The chip on the right shows the underside, highlighting the exposed silicon die pad and the lead frame surrounding it, indicating that these are likely surface-mount chips with a quad flat package (QFP) design.</a></p>
+</div>
+<div></div>
+<p>All chips have vulnerabilities, and most vendors’ strategy is not to talk about them. We consider this to be suboptimal, so instead, we entered into the DEF CON spirit by offering a one-month, <a href="https://www.raspberrypi.com/news/can-you-hack-our-new-chip/" rel="noopener noreferrer" target="_blank">$10,000 prize</a> to the first person to retrieve a secret value from the one-time-programmable (OTP) memory on the device. Our aim was to smoke out weaknesses early, so that we could fix them before RP2350 became widely deployed in secure applications. This open approach to security engineering has been generally well received: call it “security through transparency”, in contrast with the “security through obscurity” philosophy of other vendors.</p>
+<p>Nobody claimed the prize by the deadline, so in September we extended the deadline to the end of the year and doubled the prize to $20,000. Today, we’re pleased (ish) to announce that we received not one but four valid submissions, all of which require physical access to the chip, with varying degrees of intrusiveness. Outside of the contest, <a href="https://x.com/ghidraninja" rel="noopener noreferrer" target="_blank">Thomas “stacksmashing” Roth</a> and the team at <a href="https://www.hextree.io/" rel="noopener noreferrer" target="_blank">Hextree</a> also discovered a vulnerability, which we describe below.</p>
+<p>So with no further ado, the winners are:</p>
+<div></div>
+<h3>“Hazardous threes” – Aedan Cullen</h3>
+<div></div>
+<p>RP2350’s antifuse OTP memory is a security-critical component: security configuration bits are stored in OTP and read early in the reset process. A state machine called the OTP PSM is responsible for these reads. Unfortunately, it turns out that the OTP PSM has an exploitable weakness.</p>
+<p>The antifuse array is powered via the <code>USB_OTP_VDD</code> pin. To protect against power faults, the PSM uses “guard reads”: reads of known data very close to reads of security-critical data. A power fault should cause a mismatch in the known guard data, indicating that the associated security-critical read is untrustworthy. We use a single guard word: 0x333333.</p>
+<p>However, the OTP may retain the last sensed read data during a power fault, and subsequent reads return the most-recently-read data from when power was good. This is not itself a flaw, but it interacts poorly with the choice of guard word. If <code>USB_OTP_VDD</code> is dropped precisely after a guard read has occurred, 0x333333 will be read until power is restored. Therefore, an attacker can overwrite security-critical configuration data with this value.</p>
+<div></div>
+<div>
+<p>Media in original article: <a href="https://www.raspberrypi.com/app/uploads/2025/01/Screenshot-2025-01-13-at-21.50.17-1024x729.png" rel="noopener noreferrer" target="_blank">This is a close-up photo of an electronic circuit board (green PCB) with various surface-mounted components. In the center is a black integrated RP2350 circuit chip bearing the Raspberry Pi logo. A gold-colored probe or test pin is making contact with one of the pins on the chip, suggesting testing, debugging, or programming activity. Surrounding the main chip are small resistors, capacitors, and possibly other integrated circuits, all arranged on the green board.</a></p>Image courtesy of Aedan Cullen
+</div>
+<div></div>
+<p>If the <code>CRIT0</code> and <code>CRIT1</code> words are replaced by 0x333333 during the execution of the OTP PSM, the <code>RISCV_DISABLE</code> and <code>ARM_DISABLE</code> bits will be set, and the <code>DEBUG_DISABLE</code> bit will be cleared. <code>ARM_DISABLE</code> takes precedence, so the chip leaves reset with the RISC-V cores running and debugging allowed, regardless of the actual configuration written in the fuses. Dumping secret data from the OTP is then straightforward.</p>
+<p>More information can be found in Aedan’s GitHub repository <a href="https://github.com/aedancullen/hacking-the-rp2350" rel="noopener noreferrer" target="_blank">here</a>, and in his Chaos Communication Congress presentation <a href="https://media.ccc.de/v/38c3-hacking-the-rp2350" rel="noopener noreferrer" target="_blank">here</a>.</p>
+<p>No mitigation is currently available for this vulnerability, which has been assigned erratum number E16. It is likely to be addressed in a future stepping of RP2350.</p>
+<div></div>
+<h3>USB bootloader single-instruction fault with supply-voltage injection – <a href="https://www.mariusmue.com" rel="noopener noreferrer" target="_blank">Marius Muench</a></h3>
+<div></div>
+<p>A foundational security feature of RP2350 is secure boot, which restricts the chip to only run code signed with a specific private key. If an attacker can bypass or break out of secure boot, they can run their own unsigned code, which can potentially dump secret data from the OTP.</p>
+<p>Marius discovered a weakness in the boot ROM’s reboot API. This supports several different reboot modes, one of which is <code>REBOOT_TYPE_PC_SP</code>, which reboots and starts execution with a specific program counter and stack pointer. This can only be triggered from secure firmware already running on the chip, but if an attacker could trigger this boot mode externally, and with controlled parameters, we would start executing code at an attacker-supplied address – without verifying the signature of the code!</p>
+<p>But how can one enter this boot mode, if it is only accessible to signed and verified firmware?</p>
+<p>The answer (of course) is fault injection. By issuing a normal reboot command to the USB bootloader, and injecting a fault (in this case by glitching the supply voltage) so that an instruction is skipped just at the right time, it is possible to trick the reboot API into believing that <code>REBOOT_TYPE_PC_SP</code> was requested. If an attacker has loaded malicious code beforehand into the RAM, this code can be executed and used to extract the secret.</p>
+<p>An interesting aspect of this attack is that the code for accepting the reboot command is actually hardened against fault injection. Unfortunately, the function implementing the reboot logic itself assumes that the incoming parameters (including the requested boot mode) are sanitised. Due to an unlucky arrangement of instructions emitted by the compiler, injecting a fault which skips one out of two very specific instructions confuses the chip into rebooting to the hazardous boot type.</p>
+<p>Marius says: “While this break may seem straightforward in retrospect, reality is quite different. Identifying and exploiting these types of issues is far from trivial. Overall, this hacking challenge was a multi-month project for me, with many dead-ends explored along the way and countless iterations of attack code and setups to confirm or refute potential findings. Nonetheless, I had plenty of fun digging deep into the intricacies of the new RP2350 microcontroller, and I would like to thank Raspberry Pi and Hextree for hosting the challenge!”</p>
+<p>Several effective mitigations are available against this attack, which has been assigned erratum number E20. The most precise mitigation is to set the OTP flag <code>BOOT_FLAGS0.DISABLE_WATCHDOG_SCRATCH</code>, which disables the ability to reboot to a particular PC/SP where that function is not required by application code.</p>
+<div></div>
+<h3>Signature check single-instruction fault with laser injection – Kévin Courdesses</h3>
+<div></div>
+<p>Kévin discovered an exploitable weakness in the secure boot path, just after the firmware to be validated has been loaded into RAM, and just before the hash function needed for the signature check is computed. Injecting a single precisely timed fault at this stage can cause the hash function to be computed over a different piece of data, controlled by the attacker. If that data is a valid signed firmware, the signature check will pass, and the attacker’s unsigned firmware will run!</p>
+<div></div>
+<div>
+Image courtesy of Kévin Courdesses
+</div>
+<div></div>
+<p>The most common method of introducing faults, seen in Marius’s attack, is to briefly pull down the supply voltage, introducing a brief “glitch”, which causes the digital logic in the chip to misbehave. RP2350 contains glitch detector circuitry, which is designed to spot most voltage glitches and to purposely halt the chip in response. To permit the injection of faults without triggering the glitch detectors, Kévin built a custom laser fault injection system; this applies a brief pulse of laser light to the back of the die, which has been exposed by grinding away part of the package. And, although several technical compromises were necessary to keep the setup within a limited budget, it worked!</p>
+<p>More information can be found in Kévin’s paper <a href="https://courk.cc/rp2350-challenge-laser" rel="noopener noreferrer" target="_blank">here</a>.</p>
+<p>No mitigation is available for this attack, which has been assigned erratum number E24. It is likely to be addressed in a future stepping of RP2350.</p>
+<div></div>
+<h3>Extracting antifuse secrets from RP2350 by FIB/PVC – IOActive</h3>
+<div></div>
+<p>OTP memories based on antifuses are widely used for storing small amounts of data (such as serial numbers, keys, and factory trimming) in integrated circuits because they are inexpensive and require no additional mask steps to fabricate. RP2350 uses an off-the-shelf antifuse memory block for storing secure boot keys and other sensitive configuration data.</p>
+<p>Antifuses are widely considered to be a “high security” storage medium, meaning that they are significantly more difficult for an attacker to extract data from than other types of memory, such as flash or mask ROM. However, with this attack, <a href="https://ioactive.com/" rel="noopener noreferrer" target="_blank">IOActive</a> has (almost) demonstrated that data bits stored in the RP2350 antifuse memory array can be extracted using a well-known semiconductor failure analysis technique: passive voltage contrast (PVC) with a focused ion beam (FIB).</p>
+<div></div>
+<div>
+Image courtesy of IOActive
+</div>
+<div></div>
+<p>The current form of the attack recovers the bitwise OR of two physically adjacent memory cells sharing common metal-1 contacts. However, with some per-bit effort it may be possible for an attacker to separate the even/odd cell values by taking advantage of the circuit-editing capabilities of the FIB.</p>
+<p>IOActive has not yet tested the technique against other antifuse IP blocks or on other process nodes. Nonetheless, it is believed to have broad applicability to all antifuse-based memories. Dr Andrew Zonenberg, who led the technical team on this project along with Antony Moor, Daniel Slone, Lain Agan, and Mario Cop, commented: “Our team found a unique attack vector for reading data out of antifuse memory, which we intend to further develop. Those who rely on antifuse memory for confidentiality should immediately reassess their security posture.”</p>
+<p>The suggested mitigation for this attack is to employ a “chaffing” technique, storing either {0, 1} or {1, 0} in each pair of bit cells, as the attack in its current form is unable to distinguish between these two states. To guard against a hypothetical version of the attack which uses circuit editing to distinguish between these states, it is recommended that keys and other secrets be stored as larger blocks of chaffed data, from which the secret is recovered by hashing.</p>
+<div></div>
+<h3>Glitch detector evaluation, and OTP read double-instruction fault with EM injection – Hextree</h3>
+<div></div>
+<p>We commissioned the Hextree team to evaluate the secure boot process, and the effectiveness of the redundancy coprocessor (RCP) and glitch detectors. They found that at the highest sensitivity setting, the glitch detectors can detect many voltage glitches; however, the rate of undetected glitches is still high enough to make attacks feasible with some effort.</p>
+<p>The majority of their work focused on electromagnetic fault injection (EMFI), which delivers a high-voltage pulse to a small coil on top of the chip. This creates an electromagnetic field which will collapse in the chip, providing for the injection of very localized faults which do not disturb the glitch detectors. Testing yielded multiple security-relevant results, notably that it is possible to corrupt values read from OTP by injecting faults very early in the boot process, and that random delays provided by the RCP are susceptible to side-channel measurements.</p>
+<p>The team also found a path to bypass an aspect of the OTP protection of the chip using a double fault: the <code>s_varm_crit_nsboot</code> function, which locks down the OTP permissions prior to entering BOOTSEL mode, has two instructions which, when both are disturbed by precisely timed faults, can prevent an OTP page from being correctly locked, effectively allowing the user to read-out and write to the OTP even when the chip configuration forbids this. The double fault can be triggered with reasonable reliability by EMFI.</p>
+<p>Several effective mitigations are available against this attack, which has been assigned erratum number E21. The attack occurs when the device is running non-secure bootloader code, and the OTP keys are extracted via the PICOBOOT interface. The USB bootloader can be disabled by setting the OTP flags <code>BOOT_FLAGS0.DISABLE_BOOTSEL_USB_PICOBOOT_IFC</code> and <code>BOOT_FLAGS0.DISABLE_BOOTSEL_USB_MSD_IFC</code>, which mitigates this vulnerability at the cost of removing the ability to update firmware on the device over USB.</p>
+<div></div>
+<div>
+Image courtesy of NewAE and Fritz
+</div>
+<div></div>
+<p>We’d also like to express gratitude to Colin O’Flynn and his team at <a href="https://www.newae.com" rel="noopener noreferrer" target="_blank">NewAE</a> for collaborating with both us and Thomas Roth / Hextree on this advanced silicon security research, as well as enabling us with their fantastic <a href="https://www.newae.com/chipwhisperer" rel="noopener noreferrer" target="_blank">ChipWhisperer</a> kit.</p>
+<div></div>
+<h3>What’s next?</h3>
+<div></div>
+<p>We’d like to thank everyone who participated in the challenge. While the rules specify a single $20,000 prize for the “best” attack, we were so impressed by the quality of the submissions that we have chosen to pay the prize in full for each of them.</p>
+<p>As expected, we’ve learned a lot. In particular, we’ve revised downward our estimate of the effectiveness of our glitch detection scheme; the difficulty of reliably injecting multiple faults even in the presence of timing uncertainty; and the cost and complexity of laser fault injection. We’ll take these lessons into account as we work to harden future chips, and anticipated future steppings of RP2350.</p>
+<p>And while this hacking challenge is over, another one is about to start. As a component of the broader RP2350 security architecture, we’ve been working to develop an implementation of AES which is hardened against side-channel attacks (notably differential power analysis), and we’ll be challenging you to defeat it. Check back next week for more details.</p>
+<p>All vendors have security vulnerabilities in their chips. We are unusual because we talk about them, and aim to fix them, rather than brushing them under the carpet. Security through transparency is here to stay.</p>
+</div>
+</article></article></main></body></html>

@@ -1,0 +1,37 @@
+{
+  "version": "V1 public",
+  "source_cutoff": "2026-09-05",
+  "source_counts": {
+    "source_records": 259,
+    "hosted_source_files": 180,
+    "pdf_files": 45,
+    "pdf_pages": 3083,
+    "html_search_sources": 131,
+    "search_entries": 3214,
+    "historical_article_copies": 49,
+    "rns_feed_reading_copies": 82,
+    "fca_mirror_reading_copies": 2,
+    "zip_originals": 2,
+    "external_only_source_records": 76,
+    "transcript_references": 4,
+    "hosted_transcript_texts": 0,
+    "curated_milestones": 57,
+    "timeline_entries": 190,
+    "kpi_observations": 432,
+    "kpi_labels": 97,
+    "dossiers": 14,
+    "reading_assignments": 107,
+    "questions": 110,
+    "call_packets": 12,
+    "pa_sessions": 3,
+    "fieldwork_protocols": 10
+  },
+  "scope_note": "Data checks concern source references and the public corpus. Historical browser verification of the original private desk is not represented as testing this public release.",
+  "public_data_checks": {
+    "source_ids_preserved": true,
+    "third_party_transcript_search_entries": 0,
+    "raw_publisher_html_excluded": true,
+    "html_copies_have_no_executable_or_remote_loading_elements": true
+  },
+  "prior_kpi_validation": "The original 432-observation ledger is preserved; the original pack recorded an 18-value spot-check. No new investment analysis or normalization has been added."
+}

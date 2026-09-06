@@ -1,0 +1,73 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><title>AI HAT+ 2 extends on-device AI range · source reading copy</title><style>body{margin:0;background:#fff;color:#18212b;font:17px/1.7 Georgia,serif}main{max-width:900px;margin:0 auto;padding:36px 28px 80px}h1,h2,h3,h4{font-family:system-ui,sans-serif;line-height:1.25}h1{font-size:30px}.attribution{font:13px/1.6 system-ui,sans-serif;border-bottom:1px solid #ccd2d8;padding-bottom:22px;margin-bottom:32px;color:#5c6670}a{color:#105c49;overflow-wrap:anywhere}table{border-collapse:collapse;display:block;max-width:100%;overflow-x:auto;margin:24px 0;font-size:14px}th,td{border:1px solid #cbd2d8;padding:8px;min-width:45px;vertical-align:top}pre{white-space:pre-wrap;overflow-wrap:anywhere}blockquote{border-left:3px solid #bbb;padding-left:18px;margin-left:0}@media(max-width:500px){main{padding:24px 16px}h1{font-size:25px}}@media print{main{padding:0}body{font-size:12px}}</style></head><body><main><div class="attribution"><strong>Fundamental Research Desk · V1 public example</strong><br>Publisher: Raspberry Pi<br>Published: 2026-01-15 · Captured: 5 September 2026<br><a href="https://www.raspberrypi.com/news/introducing-the-raspberry-pi-ai-hat-plus-2-generative-ai-on-raspberry-pi-5/" target="_blank" rel="noopener noreferrer">Open the publisher source ↗</a><p>A reading copy of a public primary-source article. Publisher wording and tables are retained; scripts, navigation, comments, publisher styling and embedded media are omitted. The live source and original PDF, where available, remain authoritative. This copy contains no AI reconstruction of missing source material.</p></div><h1>AI HAT+ 2 extends on-device AI range</h1><article><article>
+
+<h1>Introducing the Raspberry Pi AI HAT+ 2: Generative AI on Raspberry Pi 5</h1>
+<div>
+
+
+
+<ul>
+<li>
+            15th Jan 2026        </li>
+<li>
+<a href="https://www.raspberrypi.com/news/author/naush-patuck" rel="noopener noreferrer" target="_blank">
+                Naush Patuck            </a>
+</li>
+<li>
+<a href="https://www.raspberrypi.com/news/introducing-the-raspberry-pi-ai-hat-plus-2-generative-ai-on-raspberry-pi-5/#comments" rel="noopener noreferrer" target="_blank">
+                28 comments            </a>
+</li>
+</ul>
+
+</div>
+
+<div>
+<p>A little over a year ago, we introduced the <a href="https://www.raspberrypi.com/products/ai-hat/" rel="noopener noreferrer" target="_blank">Raspberry Pi AI HAT+</a>, an add-on board for Raspberry Pi 5 featuring the Hailo-8 (26-TOPS variant) and Hailo-8L (13-TOPS variant) neural network accelerators. With all AI processing happening directly on the device, the AI HAT+ delivered true edge AI capabilities to our users, giving them data privacy and security while eliminating the need to subscribe to expensive cloud-based AI services.</p>
+<p>While the AI HAT+ provides best-in-class acceleration for vision-based neural network models, including object detection, pose estimation, and scene segmentation (see it in action <a href="https://youtu.be/Z6aYwU8xnsA?si=8H6bMbJg-19duFLP" rel="noopener noreferrer" target="_blank">here</a>), it lacks the capability to run the increasingly popular generative AI (GenAI) models. Today, we are excited to announce the <a href="https://www.raspberrypi.com/products/ai-hat-plus-2/" rel="noopener noreferrer" target="_blank">Raspberry Pi AI HAT+ 2</a>, our first AI product designed to fill the generative AI gap.</p>
+<div></div>
+
+<h2>Unlock generative AI on your Raspberry Pi 5</h2>
+<p>Featuring the new Hailo-10H neural network accelerator, the Raspberry Pi AI HAT+ 2 delivers 40 TOPS (INT4) of inferencing performance, ensuring generative AI workloads run smoothly on Raspberry Pi 5. Performing all AI processing locally and without a network connection, the AI HAT+ 2 operates reliably and with low latency, maintaining the privacy, security, and cost-efficiency of cloud-free AI computing that we introduced with the original AI HAT+.</p>
+<p>Unlike its predecessor, the AI HAT+ 2 features 8GB of dedicated on-board RAM, enabling the accelerator to efficiently handle much larger models than previously possible. This, along with an updated hardware architecture, allows the Hailo-10H chip to accelerate large language models (LLMs), vision-language models (VLMs), and other generative AI applications.</p>
+<p>For vision-based models — such as Yolo-based object recognition, pose estimation, and scene segmentation — the AI HAT+ 2’s computer vision performance is broadly equivalent to that of its 26-TOPS predecessor, thanks to the on-board RAM. It also benefits from the same tight integration with our camera software stack (libcamera, rpicam-apps, and Picamera2) as the original AI HAT+. For users already working with the AI HAT+ software, transitioning to the AI HAT+ 2 is mostly seamless and transparent.</p>
+<div></div>
+
+<h2>Some example applications</h2>
+<p>The following LLMs will be available to install at launch:</p>
+<table><tbody><tr><td><strong>Model</strong></td><td><strong>Parameters/size</strong></td></tr><tr><td>DeepSeek-R1-Distill</td><td>1.5 billion</td></tr><tr><td>Llama3.2</td><td>1 billion</td></tr><tr><td>Qwen2.5-Coder </td><td>1.5 billion</td></tr><tr><td>Qwen2.5-Instruct </td><td>1.5 billion</td></tr><tr><td>Qwen2</td><td>1.5 billion</td></tr></tbody></table>
+<p>More (and larger) models are being readied for updates, and should be available to install soon after launch.</p>
+<p>Let’s take a quick look at some of these models in action. The following examples use the hailo-ollama LLM backend (available in <a href="https://hailo.ai/developer-zone/software-downloads/?product=ai_accelerators&amp;device=hailo_10h" rel="noopener noreferrer" target="_blank">Hailo’s Developer Zone</a>) and the <a href="https://openwebui.com/" rel="noopener noreferrer" target="_blank">Open WebUI</a> frontend, providing a familiar chat interface via a browser. All of these examples are running entirely locally on a Raspberry Pi AI HAT+ 2 connected to a Raspberry Pi 5.</p>
+<p>The first example uses the <a href="https://huggingface.co/collections/Qwen/qwen2" rel="noopener noreferrer" target="_blank">Qwen2</a> model to answer a few simple questions:</p>
+<div></div>
+<div>
+<p>Media in original article: <a href="https://www.youtube.com/embed/Fe-LDntUZgI?feature=oembed" rel="noopener noreferrer" target="_blank">Using an LLM with the Raspberry Pi AI HAT+ 2</a></p>
+</div>
+<div></div>
+<p>The next example uses the <a href="https://huggingface.co/collections/Qwen/qwen25-coder" rel="noopener noreferrer" target="_blank">Qwen2.5-Coder</a> model to perform a coding task:</p>
+<div></div>
+<div>
+<p>Media in original article: <a href="https://www.youtube.com/embed/fbT2WeyXtL8?feature=oembed" rel="noopener noreferrer" target="_blank">Raspberry Pi AI HAT+ 2 - Coding assistant</a></p>
+</div>
+<div></div>
+<p>This example does some simple French-to-English translation using Qwen2:</p>
+<div></div>
+<div>
+<p>Media in original article: <a href="https://www.youtube.com/embed/KA1uVpvcQJc?feature=oembed" rel="noopener noreferrer" target="_blank">Translating text with the Raspberry Pi AI HAT+ 2</a></p>
+</div>
+<div></div>
+<p>The final example shows a VLM describing the scene from a camera stream:</p>
+<div></div>
+<div>
+<p>Media in original article: <a href="https://www.youtube.com/embed/9tvWtIRxDck?feature=oembed" rel="noopener noreferrer" target="_blank">Vision Language Model with the Raspberry Pi AI HAT+ 2</a></p>
+</div>
+<div></div>
+<h2>Fine-tune your AI models</h2>
+<p>By far the most popular examples of generative AI models are LLMs like ChatGPT and Claude, text-to-image/video models like Stable Diffusion and DALL-E, and, more recently, VLMs that combine the capabilities of vision models and LLMs. Although the examples above showcase the capabilities of the available AI models, one must keep their limitations in mind: cloud-based LLMs from OpenAI, Meta, and Anthropic range from 500 billion to 2 trillion parameters; the edge-based LLMs running on the Raspberry Pi AI HAT+ 2, which are sized to fit into the available on-board RAM, typically run at 1–7 billion parameters. Smaller LLMs like these are not designed to match the knowledge set available to the larger models, but rather to operate within a constrained dataset.</p>
+<p>This limitation can be overcome by fine-tuning the AI models for your specific use case. On the original Raspberry Pi AI HAT+, visual models (such as Yolo) can be retrained using image datasets suited to the HAT’s intended application — this is also the case for the Raspberry Pi AI HAT+ 2, and can be done using the <a href="https://hailo.ai/products/hailo-software/hailo-ai-software-suite/#sw-dc" rel="noopener noreferrer" target="_blank">Hailo Dataflow Compiler</a>.</p>
+<p>Similarly, the AI HAT+ 2 supports Low-Rank Adaptation (LoRA)–based fine-tuning of the language models, enabling efficient, task-specific customisation of pre-trained LLMs while keeping most of the base model parameters frozen. Users can compile adapters for their particular tasks using the Hailo Dataflow Compiler and run the adapted models on the Raspberry Pi AI HAT+ 2.</p>
+<h2>Available to buy now</h2>
+<p>The Raspberry Pi AI HAT+ 2 is available now at $130. For help setting yours up, check out our <a href="https://www.raspberrypi.com/documentation/accessories/ai-hat-plus.html" rel="noopener noreferrer" target="_blank">AI HAT guide</a>.</p>
+<p>Hailo’s <a href="https://github.com/hailo-ai/hailo-apps" rel="noopener noreferrer" target="_blank">GitHub repo</a> provides plenty of examples, demos, and frameworks for vision- and GenAI-based applications, such as VLMs, voice assistants, and speech recognition. You can also find documentation, tutorials, and downloads for the Dataflow Compiler and the hailo-ollama server in Hailo’s <a href="https://hailo.ai/developer-zone/" rel="noopener noreferrer" target="_blank">Developer Zone</a>.</p>
+<div></div>
+
+</div>
+</article></article></main></body></html>

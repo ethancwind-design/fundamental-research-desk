@@ -1,0 +1,248 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><title>Pico 2 and RP2350 launch · source reading copy</title><style>body{margin:0;background:#fff;color:#18212b;font:17px/1.7 Georgia,serif}main{max-width:900px;margin:0 auto;padding:36px 28px 80px}h1,h2,h3,h4{font-family:system-ui,sans-serif;line-height:1.25}h1{font-size:30px}.attribution{font:13px/1.6 system-ui,sans-serif;border-bottom:1px solid #ccd2d8;padding-bottom:22px;margin-bottom:32px;color:#5c6670}a{color:#105c49;overflow-wrap:anywhere}table{border-collapse:collapse;display:block;max-width:100%;overflow-x:auto;margin:24px 0;font-size:14px}th,td{border:1px solid #cbd2d8;padding:8px;min-width:45px;vertical-align:top}pre{white-space:pre-wrap;overflow-wrap:anywhere}blockquote{border-left:3px solid #bbb;padding-left:18px;margin-left:0}@media(max-width:500px){main{padding:24px 16px}h1{font-size:25px}}@media print{main{padding:0}body{font-size:12px}}</style></head><body><main><div class="attribution"><strong>Fundamental Research Desk · V1 public example</strong><br>Publisher: Raspberry Pi<br>Published: 2024-08-08 · Captured: 5 September 2026<br><a href="https://www.raspberrypi.com/news/raspberry-pi-pico-2-our-new-5-microcontroller-board-on-sale-now/" target="_blank" rel="noopener noreferrer">Open the publisher source ↗</a><p>A reading copy of a public primary-source article. Publisher wording and tables are retained; scripts, navigation, comments, publisher styling and embedded media are omitted. The live source and original PDF, where available, remain authoritative. This copy contains no AI reconstruction of missing source material.</p></div><h1>Pico 2 and RP2350 launch</h1><article><article>
+
+<h1>Raspberry Pi Pico 2, our new $5 microcontroller board, on sale now</h1>
+<div>
+
+
+
+<ul>
+<li>
+            8th Aug 2024        </li>
+<li>
+<a href="https://www.raspberrypi.com/news/author/eben" rel="noopener noreferrer" target="_blank">
+                Eben Upton            </a>
+</li>
+<li>
+<a href="https://www.raspberrypi.com/news/raspberry-pi-pico-2-our-new-5-microcontroller-board-on-sale-now/#comments" rel="noopener noreferrer" target="_blank">
+                69 comments            </a>
+</li>
+</ul>
+
+</div>
+
+<div>
+<p>We’re happy to announce the launch of <a href="https://www.raspberrypi.com/products/raspberry-pi-pico-2/" rel="noopener noreferrer" target="_blank">Raspberry Pi Pico 2</a>, our second-generation microcontroller board, built on RP2350: a new high-performance, secure microcontroller designed here at Raspberry Pi.</p>
+<div>
+
+</div>
+<p>With a higher core clock speed, twice the memory, more powerful Arm cores, new security features, and upgraded interfacing capabilities, Pico 2 delivers a significant performance and feature uplift, while retaining hardware and software compatibility with earlier members of the Pico series.</p>
+<p><a href="https://www.raspberrypi.com/products/raspberry-pi-pico-2/" rel="noopener noreferrer" target="_blank">Pico 2</a> is on sale now, priced at $5.</p>
+<div></div>
+<h2><strong>RP2040: the engineer’s microcontroller</strong></h2>
+<div></div>
+<p>Back in January 2021, we surprised everyone with the launch of the original Pico, and our <a href="https://www.raspberrypi.com/products/rp2040/" rel="noopener noreferrer" target="_blank">RP2040</a> microcontroller. In the three and a half years since, we’ve sold nearly four million units of Pico and its wireless-enabled sibling Pico W. RP2040 itself has found a home in countless third-party development boards, and in OEM products from pinball tables to synthesizers.</p>
+<p>We’ve used a lot of other microcontrollers over the years, and we built RP2040 to be the microcontroller we’d always wanted: two fast 32-bit cores, lots of on-chip RAM, and flexible interfacing – courtesy of our programmable I/O (PIO) subsystem – all tied together by deterministic bus fabric which lets the best developers squeeze every drop of concurrent power out of the system. We’ve seen some amazing demonstrations of that power: from our very own Graham Sanderson’s <a href="https://kilograham.github.io/rp2040-doom/" rel="noopener noreferrer" target="_blank">port</a> of DOOM; to Dmitry Grinberg’s <a href="https://x.com/dmitrygr/status/1704350983877198013" rel="noopener noreferrer" target="_blank">port</a> of PalmOS; to Kevin Vance’s “CPU-less” <a href="https://github.com/cknave/c64-pico-ram-interface" rel="noopener noreferrer" target="_blank">Commodore 64 cartridge</a>.</p>
+<div></div>
+
+<p>Media in original article: <a href="https://www.raspberrypi.com/app/uploads/2022/01/Tape-1024x683.jpg" rel="noopener noreferrer" target="_blank">rp2040</a></p>
+<p>Media in original article: <a href="https://www.raspberrypi.com/app/uploads/2021/01/Raspberry-Pi-Pico-with-RP2040-1024x840.png" rel="noopener noreferrer" target="_blank">RP2040 on a Raspberry Pi Pico</a></p>
+Our RP2040 microcontroller featured on the original Raspberry Pi Pico
+<div></div>
+<p>But while RP2040 has succeeded beyond our wildest dreams, we always knew we could do better. There were features on our own list that didn’t make the cut first time round: on-chip storage; lower-power idle states; package options. And there were new features requested by the army of RP2040 users: faster cores; more RAM; code protection.</p>
+<div></div>
+<h2><strong>Enter RP2350</strong></h2>
+<div></div>
+<p>So, two years ago, with the RP1 I/O controller for <a href="https://www.raspberrypi.com/products/raspberry-pi-5/" rel="noopener noreferrer" target="_blank">Raspberry Pi 5</a> in the bag, the Raspberry Pi chip team started work on what would become <a href="https://www.raspberrypi.com/products/rp2350/" rel="noopener noreferrer" target="_blank">RP2350</a>. This is a vastly more sophisticated design than RP2040, featuring:</p>
+<ul>
+<li>Two 150MHz Arm Cortex-M33 cores, with floating point and DSP support</li>
+<li>520KB of on-chip SRAM in ten concurrently accessible banks</li>
+<li>A comprehensive security architecture, built around Arm TrustZone for Cortex-M, and including:
+<ul>
+<li>Signed boot support</li>
+<li>8KB of on-chip antifuse one-time-programmable (OTP) memory</li>
+<li>SHA-256 acceleration</li>
+<li>A hardware true random number generator (TRNG)</li>
+</ul>
+</li>
+<li>An on-chip switch-mode power supply and low-quiescent-current LDO</li>
+<li>Twelve upgraded PIO state machines</li>
+<li>A new HSTX peripheral for high-speed data transmission</li>
+<li>Support for external QSPI PSRAM</li>
+</ul>
+<div></div>
+<div>
+<p>Media in original article: <a href="https://www.raspberrypi.com/app/uploads/2024/08/RP2350-colour-Medium.jpeg" rel="noopener noreferrer" target="_blank">The image shows two RP2350 microcontrollers. The chip on the left features the Raspberry Pi logo, a stylised raspberry with a leaf. The chip is on a stylised sky blue background with what look like thin white cloud wisps darted through it.</a></p>
+</div>
+<div></div>
+<p>Where RP2040 provides only a single 7×7mm, QFN56 package option, this time we’re offering a choice: a 7×7mm, QFN60 package (RP2350A) with 30 GPIOs, or a 10×10mm, QFN80 package (RP2350B) with 48 GPIOs; and variants of each with 2MB of stacked-in-package QSPI flash (RP2354A and RP2354B). </p>
+<p>And we’ve stayed true to our affordable roots: although our silicon die now measures an extravagant 5.3mm<sup>2</sup>, versus 2.7mm<sup>2</sup> for RP2040, RP2350A will be just ten cents more expensive, costing $0.80 in 3,400-unit reels, or $1.10 in single-unit quantities. RP2350B will cost ten cents more than RP2350A, while the RP2354 variants will cost just twenty cents more than their flashless brethren.</p>
+<div></div>
+<div>
+
+</div>
+<div></div>
+<p>RP2350 will be generally available in volume before the end of 2024. To register your interest, and to participate in our samples program, head over to the <a href="https://www.raspberrypi.com/products/rp2350/" rel="noopener noreferrer" target="_blank">product page</a>.</p>
+<div></div>
+<h2><strong>Board games</strong></h2>
+<div></div>
+<p>Pico 2 pairs RP2350A with 4MB of external QSPI flash, up from 2MB on the original Pico. It is form-factor and electrically compatible with the original Pico design.</p>
+<div></div>
+<div>
+<p>Media in original article: <a href="https://www.raspberrypi.com/app/uploads/2024/08/Pico-2-top-Medium.jpeg" rel="noopener noreferrer" target="_blank">The image shows a Raspberry Pi Pico 2, a small, rectangular microcontroller development board designed by the Raspberry Pi Foundation. This board is similar in appearance to the Raspberry Pi Pico, but it includes wireless connectivity features, as denoted by the "W" in its name.</a></p>
+</div>
+<div></div>
+<p>While there is relatively little stock in channel today, Pico 2 is in full-rate production with our friends at Sony. Many of our Approved Reseller partners are operating backorder and reservation schemes, and we will be shipping units to them on a regular basis over the next few weeks.</p>
+<p>Before the end of the year, we expect to ship a wireless-enabled Pico 2 W, using the same Infineon 43439 modem as Pico W, and versions of both Pico 2 and Pico 2 W with pre-installed 0.1-inch headers.</p>
+<div></div>
+<h2><strong>Software and documentation</strong></h2>
+<div></div>
+<p>Raspberry Pi is as much a software company as it is a hardware company: developers experience our hardware products through the lens of our software platforms, and we spend an enormous amount of time and money on polishing those platforms.</p>
+<p>As you’d expect, the launch of Pico 2, and RP2350, is accompanied by an updated release of the <a href="https://github.com/raspberrypi/pico-sdk" rel="noopener noreferrer" target="_blank">Pico SDK</a>, and by new <a href="https://micropython.org/download/RPI_PICO2/" rel="noopener noreferrer" target="_blank">MicroPython</a> and <a href="https://circuitpython.org/" rel="noopener noreferrer" target="_blank">CircuitPython</a> images. And <a href="https://www.thejpster.org.uk/blog/blog-2024-08-08/" rel="noopener noreferrer" target="_blank">Jonathan Pallant</a> and his co-conspirators have been working to <a href="https://github.com/thejpster/rp-hal-rp2350-public/" rel="noopener noreferrer" target="_blank">bring the Rust language</a> to our new platform.</p>
+<p>We’ve been collaborating with the <a href="https://www.trustedfirmware.org/" rel="noopener noreferrer" target="_blank">Trusted Firmware</a> project to establish RP2350 as the reference hardware platform for the Trusted Firmware-M 2.1.0 <a href="https://www.trustedfirmware.org/blog/tf-m-v2-1-0_lts/" rel="noopener noreferrer" target="_blank">Long Term Support</a> release. TF-M provides a reference implementation for PSA Certified on Arm v8-M chips, providing developers with an easy route to secure devices against common attacks. RP2350 will be laboratory tested by a certified, independent lab, with the goal of achieving PSA Certified Level 2 ahead of a release in October.</p>
+<p>Finally, we’re pleased to be teaming up with Google to launch the Pigweed SDK with native support for Pico 2. Pigweed’s middleware libraries have shipped in millions of devices, including Google’s own Pixel devices and Nest thermostats. Now, the Pigweed SDK makes it even easier for you to use these components when building your projects for Pico 2. Head over to <a href="https://opensource.googleblog.com/2024/08/introducing-pigweed-sdk.html" rel="noopener noreferrer" target="_blank">Google’s announcement page</a> to learn more!</p>
+<div></div>
+<div>
+Google’s demo built on the new Pigweed SDK uses Pimoroni’s Enviro+ Pack to help show off the neat stuff Pigweed does
+</div>
+<div></div>
+<p>As with all our silicon products, RP2350 is accompanied by a comprehensive <a href="https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf" rel="noopener noreferrer" target="_blank">datasheet</a>. We’re also providing a tutorial showing you how to <a href="https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf" rel="noopener noreferrer" target="_blank">get started with C/C++ development</a> using the newly updated <a href="https://github.com/raspberrypi/pico-vscode" rel="noopener noreferrer" target="_blank">Raspberry Pi Pico Visual Studio Code extension</a>.</p>
+<div></div>
+<h2><strong>Painting a target on our backs</strong></h2>
+<div></div>
+<p>The cornerstone of the <a href="https://www.raspberrypi.com/products/rp2350/" rel="noopener noreferrer" target="_blank">RP2350</a> security model is signed boot. If security is enabled, it is only possible to boot a binary if it has been signed using a private key, with a hash of the corresponding public key stored in OTP. Preventing an attacker from running arbitrary code greatly complicates the task of extracting OTP contents, including cryptographic keys used for code protection.</p>
+<p>Other vendors’ track record in implementing boot security is pretty dismal. Broad-market microcontrollers often lack effective countermeasures against modern fault-injection attacks, such as those employed in LimitedResults’ <a href="https://limitedresults.com/2020/06/nrf52-debug-resurrection-approtect-bypass/" rel="noopener noreferrer" target="_blank">Debug Resurrection</a> attack on Nordic nRF52 devices, and Chris Gerlinsky’s work on <a href="https://av.tib.eu/media/32392" rel="noopener noreferrer" target="_blank">bypassing Code Read Protection</a> in NXP LPC family devices.</p>
+<p>While RP2350 uses several techniques, including hardware fast glitch detectors and our patent-pending redundancy coprocessor, to protect control flow and data integrity against fault-injection attacks, we fully expect to find, and fix, flaws in our boot process. And we want to find these flaws early, before RP2350 is deployed in critical applications.</p>
+<p>Ahead of launch, we commissioned NewAE and Hextree to audit our security architecture. And now we’re offering a $10,000 bounty for the first confirmed break of our signed boot process. This will run for a month in the first instance: we may extend the window if no flaw is found, or offer further bounties for further distinct flaws. Full details of the bounty program can be found <a href="https://github.com/raspberrypi/rp2350_hacking_challenge" rel="noopener noreferrer" target="_blank">here.</a></p>
+<div></div>
+<div>
+
+</div>
+<div></div>
+<p>To get RP2350 hardware into the hands of the engineers most likely to find these flaws, we’ve partnered with the <a href="https://defcon.org/" rel="noopener noreferrer" target="_blank">DEF CON hacking convention</a>, which starts today in Las Vegas. This year’s badge is powered by RP2350, and makes a great platform for experimenting with our security architecture. And for anyone who wants to participate, but doesn’t want to risk bricking their badge, Hextree have produced a limited number of boards intended specifically for supply-rail and electromagnetic glitching.</p>
+<div></div>
+<div>
+
+</div>
+<div></div>
+<p>Our team will be camped out alongside Hextree in the Embedded Systems Village during the conference: come on down and say hi!</p>
+<div></div>
+<h2><strong>Partners</strong></h2>
+<div></div>
+<p>Over the past year, we’ve been working with some of our closest partners to develop products based on RP2350. Many of these are upgrades of existing RP2040-based products, while some are entirely new. Here’s a non-exhaustive list of what we expect to be available today or over the next month.</p>
+<h3><strong><em>4D Systems</em></strong></h3>
+<p>The gen4-RP2530 series comprises high-performance displays from 2.4″ to 7.0″, available with touch and non-touch options.</p>
+<div>
+<a href="https://4dsystems.com.au/" rel="noopener noreferrer" target="_blank">4D Systems</a> gen4-RP2530 series
+</div>
+<h3><strong><em>Adafruit</em></strong></h3>
+<p>Metro RP2350 lets you use Arduino-compatible shields and accessories with RP2350. Feather RP2350 brings the power of RP2350 to the popular Feather format, including compatibility with FeatherWings.</p>
+<div></div>
+<div>
+<a href="https://www.adafruit.com/" rel="noopener noreferrer" target="_blank">Adafruit</a> Feather RP2350
+</div>
+<h3><strong><em>Bus Pirate</em></strong></h3>
+<p>Bus Pirate 5XL and Bus Pirate 6 are RP2350-based open-hardware debugging tools.</p>
+<div></div>
+<div>
+<a href="https://buspirate.com/" rel="noopener noreferrer" target="_blank">Bus Pirate</a> 5XL
+</div>
+<h3><strong><em>Cytron</em></strong></h3>
+<p>The IRIV I/O Controller is an industrial-grade I/O controller powered by RP2350.</p>
+<div>
+<a href="https://www.cytron.io/" rel="noopener noreferrer" target="_blank">Cytron</a> IRIV I/O Controller
+</div>
+<p>MOTION 2350 Pro is a versatile robot controller powered by RP2350.</p>
+<div></div>
+<div>
+<a href="https://www.cytron.io/" rel="noopener noreferrer" target="_blank">Cytron</a> MOTION 2350 Pro
+</div>
+<h3><strong><em>Hellbender</em></strong></h3>
+<p>The Hellbender Raspberry Pi RP2350 development board is designed to be a general purpose microcontroller and sensor board ready to be integrated into any project.</p>
+<div></div>
+<div>
+<a href="https://www.hellbender.com/" rel="noopener noreferrer" target="_blank">Hellbender</a> RP2350 development board
+</div>
+<h3><strong><em>Ignys</em></strong></h3>
+<p>Ignys’ RP2350 development board can be powered from battery and solar panels, with a focus on Wi-Fi and IoT.</p>
+<div></div>
+<div>
+<a href="https://ignys.com/blog/raspberry-pi/" rel="noopener noreferrer" target="_blank">Ignys</a> RP2350 development board
+</div>
+<h3><strong><em>Invector Labs</em></strong></h3>
+<p>Challenger+ RP2350 BConnect is an RP2350-based module with 8MB flash, 8MB PSRAM, and dual BConnect. </p>
+<div></div>
+<div>
+<a href="https://ilabs.se/" rel="noopener noreferrer" target="_blank">Invector Labs</a> Challenger+ RP2350 BConnect
+</div>
+<p>Challenger+ RP2350 WiFi6/BLE5 is an RP2350-based module with 8MB flash, 8MB PSRAM, and an integrated WiFi6/BLE5 module.</p>
+<div>
+<a href="https://ilabs.se/" rel="noopener noreferrer" target="_blank">Invector Labs</a> Challenger+ RP2350 BConnect
+</div>
+<h3><strong><em>Melopero</em></strong></h3>
+<p>Perpetuo LoRa can run on solar power and a compact battery, making it perfect for off-grid projects.</p>
+<div>
+<a href="https://www.melopero.com/" rel="noopener noreferrer" target="_blank">Melopero</a> Perpetuo LoRa
+</div>
+<h3><strong><em>NewAE</em></strong></h3>
+<p>This Target Board exposes the RP2350 security features, allowing you to test against attacks like power analysis and fault injection.</p>
+<div></div>
+<div>
+<a href="https://newae.com/" rel="noopener noreferrer" target="_blank">NewAE</a> RP2350 Target for ChipWhisperer
+</div>
+<h3><strong><em>Pimoroni</em></strong></h3>
+<p>Explorer is an electronics playground with a portable layout. Tiny2350 is a miniature development board based on RP2350A. Plasma 2350 is an all-in-one, USB-C powered controller, and PGA 2350 is a minimal RP2350B breakout board modelled on a Pin Grid Array.</p>
+<div></div>
+
+
+
+
+<a href="https://shop.pimoroni.com/" rel="noopener noreferrer" target="_blank">Pimoroni</a> Tiny 2350, Plasma 2350 and PGA2350
+<div></div>
+<div>
+<a href="https://shop.pimoroni.com/" rel="noopener noreferrer" target="_blank">Pimoroni</a> Explorer
+</div>
+<h3><strong><em>Seeed</em></strong></h3>
+<p>XIAO RP2350 aims to be the smallest RP2350 development board, offering 19 GPIOs, an RGB LED, and an integrated battery management system. It is compatible with all Seeed Studio XIAO accessories.</p>
+<div></div>
+<div>
+<a href="https://www.seeedstudio.com/" rel="noopener noreferrer" target="_blank">Seeed</a> XIAO RP2350
+</div>
+<h3><strong><em>Solder Party</em></strong></h3>
+<p>RP2350 Stamp and RP2350 Stamp XL are hand-solderable modules integrating RP2350, 16MB of flash, an LDO, a LiPo charger, a LED, and Reset and Boot buttons.</p>
+<div></div>
+
+
+
+<a href="https://www.solder.party/" rel="noopener noreferrer" target="_blank">Solder Party</a> RP2350 Stamp and Stamp XL
+<div></div>
+<h3><strong><em>SparkFun</em></strong></h3>
+<p>Pro Micro – RP2350 provides a powerful development platform in the popular compact Pro Micro form factor.</p>
+<div>
+<a href="https://www.sparkfun.com/" rel="noopener noreferrer" target="_blank">SparkFun</a> Pro Micro – RP2350
+</div>
+<h3><strong><em>Switch Science</em></strong></h3>
+<p>Picossci2 Breakout is a drop-in replacement for Pico 2, with a USB-C connector. The Picossci2 Breakout Module can be mounted on the PCB directly and the Picossci2 Conta Base is an RP2350 microcontroller board to which small boards can be connected without soldering.<br/></p>
+
+
+
+<a href="https://www.switch-science.com/" rel="noopener noreferrer" target="_blank">Switch Science</a> Picossci2 Breakout Module and Picossci2 Breakout
+<div>
+<a href="https://www.switch-science.com/" rel="noopener noreferrer" target="_blank">Switch Science</a> Picossci2 Conta Base
+</div>
+<h3><em><strong>Thisis</strong></em><strong><em>NotRocketScience</em></strong></h3>
+<p>Bopp &amp; Steve is a space effect modular synthesizer. Reverberates, diffuses, delays and shifts pitch based on a deconstructed audio path.</p>
+<div></div>
+<div>
+<a href="https://www.thisisnotrocketscience.nl/category/software/" rel="noopener noreferrer" target="_blank">ThisIsNotRocketScience</a> Bopp &amp; Steve
+</div>
+<h3><strong><em>Tiny Circuits</em></strong></h3>
+<p>Thumby Color is a tiny playable, programmable, and wearable keychain console.</p>
+<div>
+<a href="https://tinycircuits.com/" rel="noopener noreferrer" target="_blank">Tiny Circuits</a> Thumby Color (not 1:1 scale)
+</div>
+<h3><strong><em>Wiznet</em></strong></h3>
+<p><a href="https://wiznet.io/" rel="noopener noreferrer" target="_blank">Wiznet</a> are offering evaluation boards for their W5100S, W5500, and W6100 Ethernet chips, based on RP2350.</p>
+
+<h2><strong>One more thing</strong></h2>
+<div></div>
+<p>Although we’ve been a member of RISC-V International for many years, we’ve never found an opportunity to ship a RISC-V Raspberry Pi product. But that’s changing today, thanks to a bonus feature of RP2350: a pair of open-hardware <a href="https://github.com/Wren6991/Hazard3" rel="noopener noreferrer" target="_blank">Hazard3</a> RISC-V cores which can be substituted at boot time for the Cortex-M33 cores. Our boot ROM can even auto-detect the architecture for which a second-stage binary has been built and reboot the chip into the appropriate mode. All features of the chip, apart from a handful of security features, and the double-precision floating-point accelerator, are available in RISC-V mode.</p>
+<p>Hazard3 was developed by Luke Wren, currently a Principal Engineer in the Raspberry Pi chip team, in his free time. As a solo project, it’s an intellectual tour de force: a highly optimised three-stage pipelined processor, implementing the RV32I instruction set, and a large collection of standard extensions targeting performance and code density. If you’d like to know more, I recommend a browse through <a href="https://x.com/wren6991" rel="noopener noreferrer" target="_blank">Luke’s historical posts</a> on Twitter/X, which cover the development process in considerable detail.</p>
+<p>In adding Hazard3 to RP2350, we’re aiming to give software developers a chance to experiment with the RISC-V architecture in a stable, well-supported environment, and to popularize Hazard3 as a clean, open core, suitable for verbatim use in other devices, or as a basis for further development.</p>
+<div></div>
+<h2><strong>Credits</strong></h2>
+<div></div>
+<p>The development of Pico 2 and RP2350 has been an epic, multi-year effort: it is comfortably the second-largest engineering programme we’ve undertaken, behind only Raspberry Pi 5. Its success is a testament to the incredible talents of the team here, and to the world-class partners who have joined us on the journey.</p>
+<p><strong><em>We would like to acknowledge:</em></strong> Aragio Solutions, Arm, Dolphin Design, GF Micro, Silicon Creations, and Synopsys, for semiconductor IP; Cadence for tools; IMEC and TSMC for fabrication; Eurofins MASER for qualification; Innova-Test and Probe Test Solutions for test; Reel Service for tape-and-reel; Abracon, Bourns, Lojixx, Olympic, and Winbond for components; Sony for manufacturing; and NewAE and Hextree for security analysis.</p>
+<p><strong><em>A partial list of individuals who made significant personal contributions follows:</em></strong> Dora Aathmani, James Adams, Alasdair Allan, Derek Annison, Amund Askeland, Michael Baird, Levon Barseghyan, Jonathan Bell, David Bell, Jennifer Blakeman, Mathew Blowers, Chris Boross, Pierre Boyer, Alex Branton, Mike Buffham, Andrew Burge, Thierry Canaud, Randy Caplan, Amy Carter, Leonard Chan, Joseph Chang, Romain Chantre, Wilfried Chauveau, Melvin Cheah, Belle Chung, Nate Contino, Steve Cook, Liam Craig, Alex Dewar, Christian Domingues, Nicola Early, Andrew Evans, Fabian Fäßler, Andras Ferencz, Nick Francis, Liam Fraser, Rita Galambos, Arnaud Garnier, Nicu Gavrilă, Damien George, Sharna Ghosh, Erik Gilling, Carol Grant, Lauren Hancock, Peter Harper, Andy Hawkins, David Henly, Lucas Hoffmann, Gordon Hollingworth, Petr Hosek, James Hughes, Leane Ickes, Caleb Jamison, Richard Jones, Gareth Jones, Tammy Julyan, Thijs Kempers, Vsevolod Kozlov, Eldhose Kurian, Tijs Lammertink, Clarrie Lee, Ian Lesnet, Lestin Liu, ShuChen Liu, Matt Lokes, Chris Lowder, Helen Lynn, Ian Macaulay, Terry Mackown, Peter MacMichael, Christopher Martin, Jon Matthews, Nellie McKesson, Armando Montanez, Paul Mucur, Rob Newbold, Colin O’Flynn, Brian O Halloran, Paul Oberosler, Rod Oldfield, Mark Owen, Phil Packer, Jonathan Pallant, Mike Parker, Sara Parodi, Bastien Patoux, Billy Phillips, Dominic Plunkett, Prabhu Karthikeyan Rajasekaran, Kim Rasmussen, Haifa Redissi, Toby Roberts, Thomas Roth, Graham Sanderson, Andrew  Scheller, Vinaya Lakshmi Puthur Sekar, Alex Selby, Scott Shawcroft, Mark Sherlock, Paul Sherry, Matias Silva, Sam Snyder, Mike Stimson, Raymond Szkornik, Jean-Pierre Thibault, Diya Thomas, Roger Thornton, Mark Timmons, Aref Trigui, Utku Turker, Nat Turner, Rachit Upreti, Liz Upton, Andreas Vanduran, Tomas Vanek, William Vinnicombe, Marco Vrouwe, Micke Wersall, Simon West, Andrew West, Tom Westcott, Richard White, Rachel Whitehead, Ashley Whittaker, Alex Whyte, Jack Willis, Jim Wilson, Luke Wren, Dave Wright, Haowei Wu, and Romona Wu.</p>
+</div>
+</article></article></main></body></html>

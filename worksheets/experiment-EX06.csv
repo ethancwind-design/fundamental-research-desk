@@ -1,0 +1,2 @@
+﻿sequence_number,scheduled_time,actual_time,event_type,health_check,temperature,active_recovery_seconds,elapsed_recovery_seconds,physical_access,cause_status
+,,,,,,,,,

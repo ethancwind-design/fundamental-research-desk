@@ -1,0 +1,99 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><title>First camera board goes on sale · source reading copy</title><style>body{margin:0;background:#fff;color:#18212b;font:17px/1.7 Georgia,serif}main{max-width:900px;margin:0 auto;padding:36px 28px 80px}h1,h2,h3,h4{font-family:system-ui,sans-serif;line-height:1.25}h1{font-size:30px}.attribution{font:13px/1.6 system-ui,sans-serif;border-bottom:1px solid #ccd2d8;padding-bottom:22px;margin-bottom:32px;color:#5c6670}a{color:#105c49;overflow-wrap:anywhere}table{border-collapse:collapse;display:block;max-width:100%;overflow-x:auto;margin:24px 0;font-size:14px}th,td{border:1px solid #cbd2d8;padding:8px;min-width:45px;vertical-align:top}pre{white-space:pre-wrap;overflow-wrap:anywhere}blockquote{border-left:3px solid #bbb;padding-left:18px;margin-left:0}@media(max-width:500px){main{padding:24px 16px}h1{font-size:25px}}@media print{main{padding:0}body{font-size:12px}}</style></head><body><main><div class="attribution"><strong>Fundamental Research Desk · V1 public example</strong><br>Publisher: Raspberry Pi<br>Published: 2013-05-14 · Captured: 5 September 2026<br><a href="https://www.raspberrypi.com/news/camera-board-available-for-sale/" target="_blank" rel="noopener noreferrer">Open the publisher source ↗</a><p>A reading copy of a public primary-source article. Publisher wording and tables are retained; scripts, navigation, comments, publisher styling and embedded media are omitted. The live source and original PDF, where available, remain authoritative. This copy contains no AI reconstruction of missing source material.</p></div><h1>First camera board goes on sale</h1><article><article>
+
+<h1>Camera board available for sale!</h1>
+<div>
+
+
+
+<ul>
+<li>
+            14th May 2013        </li>
+<li>
+<a href="https://www.raspberrypi.com/news/author/eben" rel="noopener noreferrer" target="_blank">
+                Eben Upton            </a>
+</li>
+<li>
+<a href="https://www.raspberrypi.com/news/camera-board-available-for-sale/#comments" rel="noopener noreferrer" target="_blank">
+                291 comments            </a>
+</li>
+</ul>
+
+</div>
+
+<div>
+<p>The camera boards are now available for order! You can buy one from RS Components or from <a href="http://www.element14.com/community/groups/raspberry-pi" rel="noopener noreferrer" target="_blank">Premier Farnell/Element14</a>. We’ve been very grateful for your patience as we’ve tweaked and refined things; it’d have been good to get the camera board out to you last month, but we wanted your experience to be as good as possible, and we’ve been working on the software right up until last night. Thank you to Gordon and Rob at Raspberry Pi and to Dom Cobley for their work on the firmware (Rob also worked on the documentation); to JamesH for his work on the software; to the Broadcom Cambridge ISP team, particularly David Plowman and Naush Patuck, for volunteering to help with tuning; to Bruce Gentles at Broadcom for his volunteering to help with some of the initial bring-up; to James Adams at Raspberry Pi for running the hardware project, and everybody at Sony Pencoed for making it happen.</p>
+<p>Tehzeeb Gunza at OmniVision coordinated things from their end, and helped us with sensor selection. Thanks also to Gert van Loo and Rob Gwynne for their work on the hardware design. (And thank you to Broadcom for letting us take advantage of your team’s willingness to volunteer for us!) This, for the curious, is the camera lab we’ve been borrowing from Broadcom for testing. The mannequin’s name is Veronica. She’s lousy company. The room gives us a calibrated and fixed target to use during tuning; it’s designed to be filled with examples of the sorts of things people tend to take pictures of. Which makes it a kind of creepy place to hang out. Between this and <a href="http://www.raspberrypi.org/archives/996" rel="noopener noreferrer" target="_blank">anechoic chambers</a>, we’re getting the full range of testing chambers that give us the shivers.</p>
+<div><a href="https://www.raspberrypi.com/wp-content/uploads/2013/05/veronicasroom.jpg" rel="noopener noreferrer" target="_blank"><p>Media in original article: <a href="https://www.raspberrypi.com/wp-content/uploads/2013/05/veronicasroom-1024x768.jpg" rel="noopener noreferrer" target="_blank">veronicasroom</a></p></a><p>Click to enlarge. You might be interested to learn that this was snapped with a Nokia N8, which uses an earlier version of the imaging core that’s in the Raspberry Pi (but a different sensor and optics).</p></div>
+<p>For such a small device, this has been an enormous project, and a year-long effort for everybody involved. We’re pretty proud of it: we hope you like it!</p>
+<p><strong>How to set up the camera hardware</strong> <p>Media in original article: <a href="https://www.youtube.com/embed/GImeVqHQzsE" rel="noopener noreferrer" target="_blank">video</a></p></p>
+<p>Please note that the camera can be damaged by static electricity. Before removing the camera from its grey anti-static bag, please make sure you have discharged yourself by touching an earthed object (e.g. a radiator or water tap).</p>
+<p>The flex cable inserts into the connector situated between the Ethernet and HDMI ports, with the silver connectors facing the HDMI port. The flex cable connector should be opened by pulling the tabs on the top of the connector upwards then towards the Ethernet port. The flex cable should be inserted firmly into the connector, with care taken not to bend the flex at too acute an angle. The top part of the connector should then be pushed towards the HDMI connector and down, while the flex cable is held in place. (Please view the video above to watch the cable being inserted.)</p>
+<p>The camera may come with a small piece of translucent blue plastic film covering the <span>lens. This is only present to protect the lens while it is being mailed to you, and needs to be removed by gently peeling it off.</span></p>
+<p><strong>How to enable camera support in Raspbian</strong></p>
+<p>Boot up the Pi and log in. The default username is <span>pi</span>, and the default password is <span>raspberry</span>. (Note: if you have changed these from the default then you will need to supply your own user/password details).</p>
+<p>Run the following commands in a terminal to upgrade the Raspberry Pi firmware to the latest version:</p>
+<p><span>sudo apt-get update</span></p>
+<div><a href="https://www.raspberrypi.com/wp-content/uploads/2013/05/image1.jpg" rel="noopener noreferrer" target="_blank"><p>Media in original article: <a href="https://www.raspberrypi.com/wp-content/uploads/2013/05/image1.jpg" rel="noopener noreferrer" target="_blank">image</a></p></a><p>Click to enlarge</p></div>
+<p><span>sudo apt-get upgrade</span></p>
+<div><a href="https://www.raspberrypi.com/wp-content/uploads/2013/05/image-1.jpg" rel="noopener noreferrer" target="_blank"><p>Media in original article: <a href="https://www.raspberrypi.com/wp-content/uploads/2013/05/image-1.jpg" rel="noopener noreferrer" target="_blank">image (1)</a></p></a><p>Click to enlarge</p></div>
+<p>Access the configuration settings for the Pi by running the following command:</p>
+<p><span>sudo raspi-config</span></p>
+<p>Navigate to “camera” and select “enable”.</p>
+<div><a href="https://www.raspberrypi.com/wp-content/uploads/2013/05/image-2.jpg" rel="noopener noreferrer" target="_blank"><p>Media in original article: <a href="https://www.raspberrypi.com/wp-content/uploads/2013/05/image-2.jpg" rel="noopener noreferrer" target="_blank">image (2)</a></p></a><p>Click to enlarge</p></div>
+<div><a href="https://www.raspberrypi.com/wp-content/uploads/2013/05/image-3.jpg" rel="noopener noreferrer" target="_blank"><p>Media in original article: <a href="https://www.raspberrypi.com/wp-content/uploads/2013/05/image-3.jpg" rel="noopener noreferrer" target="_blank">image (3)</a></p></a><p>Click to enlarge</p></div>
+<p>Select “Finish” and reboot.</p>
+<div><a href="https://www.raspberrypi.com/wp-content/uploads/2013/05/image-4.jpg" rel="noopener noreferrer" target="_blank"><p>Media in original article: <a href="https://www.raspberrypi.com/wp-content/uploads/2013/05/image-4.jpg" rel="noopener noreferrer" target="_blank">image (4)</a></p></a><p>Click to enlarge</p></div>
+<p><strong>How to use the Raspberry Pi camera software</strong></p>
+<p><span>raspivid</span> is a command line application that allows you to capture video with the camera module, while the application <span>raspistill</span> allows you to capture images.</p>
+<p><span>-o</span> or <span>–output</span> specifies the output filename and <span>-t</span> or <span>–timeout</span> specifies the amount of time that the preview will be displayed in milliseconds. Note that this set to 5s by default and that <span>raspistill</span> will capture the final frame of the preview period.</p>
+<p><span>-d</span> or <span>–demo</span> runs the demo mode that will cycle through the various image effects that are available.</p>
+<p><strong>Example commands</strong></p>
+<p>Capture an image in jpeg format:</p>
+<p><span>raspistill -o image.jpg</span></p>
+<p>Capture a 5s video in h264 format:</p>
+<p><span>raspivid -o video.h264</span></p>
+<p>Capture a 10s video:</p>
+<p><span>raspivid -o video.h264 -t 10000</span></p>
+<p>Capture a 10s video in demo mode:</p>
+<p><span>raspivid -o video.h264 -t 10000 -d</span></p>
+<p>To see a list of possible options for running <span>raspivid</span> or <span>raspistill</span>, you can run:</p>
+<p><span>raspivid | less</span></p>
+<p><span>raspistill | less</span></p>
+<p>Use the arrow keys to scroll and type <span>q</span> to exit.</p>
+<p><a href="https://github.com/raspberrypi/userland/blob/master/host_applications/linux/apps/raspicam/RaspiCamDocs.odt" rel="noopener noreferrer" target="_blank">Extended documentation is available</a>.</p>
+<p>Note that we recommend that you change SSH password if you are using a camera, in order to prevent unwanted access.</p>
+<p><strong>How to stream video from the Raspberry Pi camera over a network</strong></p>
+<p><strong>To view the feed on Linux</strong></p>
+<p>Install the dependencies by running the following in a terminal:</p>
+<p><span>sudo apt-get install mplayer netcat</span></p>
+<p>Find your IP address by running <span>ifconfig</span>. (Your IP address will be listed in the console output and will probably be of the form 192.168.1.XXX).</p>
+<p>Run the following command in a terminal to view the feed using MPlayer:</p>
+<p><span>nc -l -p 5001 | mplayer -fps 31 -cache 1024 –</span></p>
+<p><strong>To view the feed on Windows</strong></p>
+<p>Install and run Linux instead.</p>
+<p>Find your IP address by running <span>ipconfig</span>. (Your IP address will be listed in the console output and will probably be of the form 192.168.1.XXX).</p>
+<p><a href="https://code.google.com/p/mplayer-for-windows/downloads/detail?name=mplayer-svn-36251.7z&amp;can=2&amp;q=" rel="noopener noreferrer" target="_blank">Download MPlayer</a>.</p>
+<p><a href="http://joncraton.org/media/files/nc111nt.zip" rel="noopener noreferrer" target="_blank">Download Netcat</a>.</p>
+<p>Note that your browser may complain that these files are malicious, as they are unsigned executables.</p>
+<p>Press the Windows key and the ‘r’ key simultaneously to bring up the “Run” dialog. Enter <span>cmd.exe</span> into the dialog and press enter/return to open a DOS prompt.</p>
+<p>Enter the following command at the prompt to view the feed using MPlayer:</p>
+<p>[Path to nc.exe]<span>\nc.exe -L -p 5001 | </span>[Path to mplayer.exe]<span>\mplayer.exe -fps 31 -cache 1024 –</span></p>
+<p><strong>To view the feed on OS X</strong></p>
+<p>Download <a href="http://downloads.sourceforge.net/project/mplayerosx/MPlayer%20OS%20X/MPlayerOSX2b8r5FORTIGERONLY/MplayerOSXB8r5.zip?r=http%3A%2F%2Fmplayerosx.sourceforge.net%2F&amp;ts=1368302446&amp;use_mirror=freefr" rel="noopener noreferrer" target="_blank">MPlayer</a>.</p>
+<p>Alternatively, you can download mplayer using <a href="http://mxcl.github.io/homebrew/" rel="noopener noreferrer" target="_blank">Brew</a>, which we recommend.</p>
+<p>Find your IP address by running <span>ifconfig</span>. (Your IP address will be listed in the console output and will probably be of the form 192.168.1.XXX).</p>
+<p>Run the following command in Terminal to view the feed using MPlayer:</p>
+<p><span>nc -l -p 5001 | mplayer -fps 31 -cache 1024 –</span></p>
+<p>To view the feed on a Raspberry Pi:</p>
+<p>Find your IP address by running <span>ifconfig</span>. (Your IP address will be listed in the console output and will probably be of the form 192.168.1.XXX).</p>
+<p>Run the following commands in a terminal on the receiving Pi:</p>
+<p><span>mkfifo buffer</span></p>
+<p><span>nc -p 5001 -l &gt; buffer | /opt/vc/src/hello_pi/hello_video/hello_video.bin buffer</span></p>
+<p><strong>To transmit the feed from the Pi with camera module attached</strong></p>
+<p>After setting up the “receiving” machine as per the instructions above, run the following commands in a terminal on the “transmitting” Pi:</p>
+<p><span>raspivid -t 999999 -o – | nc </span>[insert the IP address of the client]<span> 5001</span></p>
+<p>You can then use the commands listed in the “How to use the Raspberry Pi camera software” section above to change the capture time or to add a video effect.</p>
+<p><strong>How to submit bug reports or see the source code</strong></p>
+<p>You can see <a href="https://github.com/raspberrypi/userland/tree/master/host_applications/linux/apps/raspicam" rel="noopener noreferrer" target="_blank">the source code and submit bug reports</a> for <span>raspivid</span> and <span>raspicam</span> here.</p>
+</div>
+</article></article></main></body></html>

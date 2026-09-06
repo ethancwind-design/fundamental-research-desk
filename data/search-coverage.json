@@ -1,0 +1,1156 @@
+{
+  "manifest": [
+    {
+      "source_id": "fin-reports-47-document",
+      "file": "documents/2026-06-04_results-of-annual-general-meeting.pdf",
+      "pages": 3,
+      "native_pages": 3,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-reports-45-document",
+      "file": "documents/2026-04-21_notice-of-annual-general-meeting.pdf",
+      "pages": 8,
+      "native_pages": 8,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-reports-44-document",
+      "file": "documents/2026-04-21_raspberry-pi-holdings-plc-annual-report-2025.pdf",
+      "pages": 136,
+      "native_pages": 135,
+      "ocr_pages": 1,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-reports-11-document",
+      "file": "documents/2026-03-31_raspberry-pi-holdings-plc-final-results-2025.pdf",
+      "pages": 48,
+      "native_pages": 48,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-reports-11-presentation",
+      "file": "documents/2026-03-31_raspberry-pi-holdings-plc-final-results-2025-presentation.pdf",
+      "pages": 25,
+      "native_pages": 22,
+      "ocr_pages": 1,
+      "unsearchable_pages": 2
+    },
+    {
+      "source_id": "fin-reports-10-document",
+      "file": "documents/2025-09-23_raspberry-pi-holdings-plc-interim-results-2025.pdf",
+      "pages": 36,
+      "native_pages": 35,
+      "ocr_pages": 1,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-reports-10-presentation",
+      "file": "documents/2025-09-23_raspberry-pi-holdings-plc-interim-results-2025-presentation.pdf",
+      "pages": 22,
+      "native_pages": 20,
+      "ocr_pages": 0,
+      "unsearchable_pages": 2
+    },
+    {
+      "source_id": "fin-reports-8-document",
+      "file": "documents/2025-04-17_notice-of-annual-general-meeting.pdf",
+      "pages": 8,
+      "native_pages": 8,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-reports-7-document",
+      "file": "documents/2025-04-17_raspberry-pi-holdings-plc-annual-report-2024.pdf",
+      "pages": 142,
+      "native_pages": 141,
+      "ocr_pages": 1,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-reports-6-document",
+      "file": "documents/2025-04-02_principal-risks-and-uncertainties.pdf",
+      "pages": 12,
+      "native_pages": 12,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-reports-5-document",
+      "file": "documents/2025-04-02_raspberry-pi-holdings-plc-final-results-2024.pdf",
+      "pages": 45,
+      "native_pages": 45,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-reports-5-presentation",
+      "file": "documents/2025-04-02_raspberry-pi-holdings-plc-final-results-2024-presentation.pdf",
+      "pages": 24,
+      "native_pages": 22,
+      "ocr_pages": 0,
+      "unsearchable_pages": 2
+    },
+    {
+      "source_id": "fin-reports-3-document",
+      "file": "documents/2024-09-24_raspberry-pi-holdings-plc-interim-results-2024.pdf",
+      "pages": 34,
+      "native_pages": 34,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-reports-3-presentation",
+      "file": "documents/2024-09-24_raspberry-pi-holdings-plc-interim-results-2024-presentation.pdf",
+      "pages": 29,
+      "native_pages": 28,
+      "ocr_pages": 1,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-reports-2-document",
+      "file": "documents/2024-09-23_raspberry-pi-ltd-statutory-accounts-2023.pdf",
+      "pages": 75,
+      "native_pages": 75,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-reports-1-presentation",
+      "file": "documents/2024-08-28_introduction-to-raspberry-pi-presentation.pdf",
+      "pages": 21,
+      "native_pages": 15,
+      "ocr_pages": 6,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-ipo-documents-11",
+      "file": "documents/2024-06-11_prospectus.pdf",
+      "pages": 270,
+      "native_pages": 269,
+      "ocr_pages": 1,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-ch-2025-06-11-aa",
+      "file": "documents/2025-06-11_raspberry-pi-ltd-full-accounts-made-up-to-31-december-2024.pdf",
+      "pages": 41,
+      "native_pages": 0,
+      "ocr_pages": 41,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-ch-2024-09-18-aa",
+      "file": "documents/2024-09-18_raspberry-pi-ltd-full-accounts-made-up-to-31-december-2023.pdf",
+      "pages": 75,
+      "native_pages": 0,
+      "ocr_pages": 75,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-ch-2023-09-28-aa",
+      "file": "documents/2023-09-28_raspberry-pi-ltd-full-accounts-made-up-to-31-december-2022.pdf",
+      "pages": 69,
+      "native_pages": 0,
+      "ocr_pages": 69,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-ch-2022-09-28-aa",
+      "file": "documents/2022-09-28_raspberry-pi-ltd-full-accounts-made-up-to-31-december-2021.pdf",
+      "pages": 77,
+      "native_pages": 0,
+      "ocr_pages": 77,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-ch-2021-08-06-aa",
+      "file": "documents/2021-08-06_raspberry-pi-ltd-full-accounts-made-up-to-31-december-2020.pdf",
+      "pages": 34,
+      "native_pages": 0,
+      "ocr_pages": 34,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-ch-2020-09-24-aa",
+      "file": "documents/2020-09-24_raspberry-pi-ltd-full-accounts-made-up-to-31-december-2019.pdf",
+      "pages": 27,
+      "native_pages": 0,
+      "ocr_pages": 27,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-ch-2019-07-12-aa",
+      "file": "documents/2019-07-12_raspberry-pi-ltd-full-accounts-made-up-to-31-december-2018.pdf",
+      "pages": 21,
+      "native_pages": 0,
+      "ocr_pages": 21,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-ch-2018-06-11-aa",
+      "file": "documents/2018-06-11_raspberry-pi-ltd-full-accounts-made-up-to-31-december-2017.pdf",
+      "pages": 20,
+      "native_pages": 0,
+      "ocr_pages": 20,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-ch-2017-07-11-aa",
+      "file": "documents/2017-07-11_raspberry-pi-ltd-full-accounts-made-up-to-31-december-2016.pdf",
+      "pages": 20,
+      "native_pages": 0,
+      "ocr_pages": 20,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-ch-2016-08-31-aa",
+      "file": "documents/2016-08-31_raspberry-pi-ltd-full-accounts-made-up-to-31-december-2015.pdf",
+      "pages": 12,
+      "native_pages": 0,
+      "ocr_pages": 12,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-ch-2015-10-14-aa",
+      "file": "documents/2015-10-14_raspberry-pi-ltd-full-accounts-made-up-to-31-december-2014.pdf",
+      "pages": 15,
+      "native_pages": 0,
+      "ocr_pages": 15,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-ch-2014-06-03-aa",
+      "file": "documents/2014-06-03_raspberry-pi-ltd-full-accounts-made-up-to-31-december-2013.pdf",
+      "pages": 12,
+      "native_pages": 0,
+      "ocr_pages": 12,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-ch-2013-01-07-aa01",
+      "file": "documents/2013-01-07_raspberry-pi-ltd-current-accounting-period-extended-from-30-september-2013-to-31-december-2013.pdf",
+      "pages": 3,
+      "native_pages": 0,
+      "ocr_pages": 3,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-ch-2012-09-10-newinc",
+      "file": "documents/2012-09-10_raspberry-pi-ltd-incorporation.pdf",
+      "pages": 45,
+      "native_pages": 0,
+      "ocr_pages": 45,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-gov-tax-strategy",
+      "file": "documents/2025-11-26_tax-strategy.pdf",
+      "pages": 2,
+      "native_pages": 2,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-gov-schedule-of-board-responsibilities-and-reserved-matters",
+      "file": "documents/2024-06-02_schedule-of-board-responsibilities-and-reserved-matters.pdf",
+      "pages": 8,
+      "native_pages": 8,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-gov-remuneration-committee-terms-of-reference",
+      "file": "documents/2026-06-04_remuneration-committee-terms-of-reference.pdf",
+      "pages": 7,
+      "native_pages": 7,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-gov-nomination-committee-terms-of-reference",
+      "file": "documents/2025-11-26_nomination-committee-terms-of-reference.pdf",
+      "pages": 6,
+      "native_pages": 6,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "fin-gov-audit-committee-terms-of-reference",
+      "file": "documents/2024-06-02_audit-committee-terms-of-reference.pdf",
+      "pages": 10,
+      "native_pages": 10,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "technical-pi5",
+      "file": "documents/raspberry-pi-5-product-brief-2026-04.pdf",
+      "pages": 6,
+      "native_pages": 4,
+      "ocr_pages": 2,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "technical-cm5",
+      "file": "documents/compute-module-5-datasheet.pdf",
+      "pages": 38,
+      "native_pages": 38,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "technical-rp2350",
+      "file": "documents/rp2350-datasheet.pdf",
+      "pages": 1380,
+      "native_pages": 1378,
+      "ocr_pages": 2,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "technical-rp1",
+      "file": "documents/rp1-peripherals.pdf",
+      "pages": 93,
+      "native_pages": 91,
+      "ocr_pages": 2,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "technical-rp2350-security",
+      "file": "documents/rp2350-security-whitepaper-2025-11.pdf",
+      "pages": 16,
+      "native_pages": 16,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "technical-cmzero",
+      "file": "documents/compute-module-zero-datasheet.pdf",
+      "pages": 21,
+      "native_pages": 21,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "technical-rp2040-2022",
+      "file": "documents/rp2040-embedded-world-2022.pdf",
+      "pages": 8,
+      "native_pages": 6,
+      "ocr_pages": 2,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "v2-src-revpi-datasheet",
+      "file": "documents/kunbus-revpi-connect-5-datasheet.pdf",
+      "pages": 3,
+      "native_pages": 3,
+      "ocr_pages": 0,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "v2-src-toradex-datasheet-current",
+      "file": "documents/toradex-verdin-imx8m-plus-v11-datasheet-2026-06.pdf",
+      "pages": 76,
+      "native_pages": 75,
+      "ocr_pages": 1,
+      "unsearchable_pages": 0
+    },
+    {
+      "source_id": "history-003",
+      "file": "documents/web-reading/history-003.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-004",
+      "file": "documents/web-reading/history-004.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-005",
+      "file": "documents/web-reading/history-005.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-007",
+      "file": "documents/web-reading/history-007.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-008",
+      "file": "documents/web-reading/history-008.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-009",
+      "file": "documents/web-reading/history-009.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-010",
+      "file": "documents/web-reading/history-010.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-011",
+      "file": "documents/web-reading/history-011.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-012",
+      "file": "documents/web-reading/history-012.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-013",
+      "file": "documents/web-reading/history-013.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-014",
+      "file": "documents/web-reading/history-014.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-015",
+      "file": "documents/web-reading/history-015.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-016",
+      "file": "documents/web-reading/history-016.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-017",
+      "file": "documents/web-reading/history-017.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-018",
+      "file": "documents/web-reading/history-018.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-019",
+      "file": "documents/web-reading/history-019.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-020",
+      "file": "documents/web-reading/history-020.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-021",
+      "file": "documents/web-reading/history-021.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-022",
+      "file": "documents/web-reading/history-022.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-023",
+      "file": "documents/web-reading/history-023.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-024",
+      "file": "documents/web-reading/history-024.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-025",
+      "file": "documents/web-reading/history-025.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-026",
+      "file": "documents/web-reading/history-026.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-027",
+      "file": "documents/web-reading/history-027.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-028",
+      "file": "documents/web-reading/history-028.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-029",
+      "file": "documents/web-reading/history-029.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-031",
+      "file": "documents/web-reading/history-031.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-032",
+      "file": "documents/web-reading/history-032.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-035",
+      "file": "documents/web-reading/history-035.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-036",
+      "file": "documents/web-reading/history-036.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-037",
+      "file": "documents/web-reading/history-037.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-038",
+      "file": "documents/web-reading/history-038.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-039",
+      "file": "documents/web-reading/history-039.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-040",
+      "file": "documents/web-reading/history-040.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-041",
+      "file": "documents/web-reading/history-041.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-042",
+      "file": "documents/web-reading/history-042.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-043",
+      "file": "documents/web-reading/history-043.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-044",
+      "file": "documents/web-reading/history-044.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-045",
+      "file": "documents/web-reading/history-045.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-046",
+      "file": "documents/web-reading/history-046.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-047",
+      "file": "documents/web-reading/history-047.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-048",
+      "file": "documents/web-reading/history-048.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-049",
+      "file": "documents/web-reading/history-049.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-050",
+      "file": "documents/web-reading/history-050.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-051",
+      "file": "documents/web-reading/history-051.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-052",
+      "file": "documents/web-reading/history-052.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-053",
+      "file": "documents/web-reading/history-053.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-054",
+      "file": "documents/web-reading/history-054.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "history-055",
+      "file": "documents/web-reading/history-055.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "fin-rns-2026-cfo",
+      "file": "documents/rns-reading/2026-07-06_rnn222r.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "fin-rns-2026-jun-trading",
+      "file": "documents/rns-reading/2026-06-05_w0ng2pr.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-06-04-w14zm1w",
+      "file": "documents/rns-reading/2026-06-04_w14zm1w.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-04-23-rd6113x",
+      "file": "documents/rns-reading/2026-04-23_rd6113x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-04-22-xjleekw",
+      "file": "documents/rns-reading/2026-04-22_xjleekw.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-04-20-x2zedzx",
+      "file": "documents/rns-reading/2026-04-20_x2zedzx.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-04-20-rymj63r",
+      "file": "documents/rns-reading/2026-04-20_rymj63r.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-03-31-xjljmgw",
+      "file": "documents/rns-reading/2026-03-31_xjljmgw.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-01-15-w14ev9w",
+      "file": "documents/rns-reading/2026-01-15_w14ev9w.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "fin-rns-2026-jan-trading",
+      "file": "documents/rns-reading/2026-01-13_w0np4pr.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-10-31-xjgdp7x",
+      "file": "documents/rns-reading/2025-10-31_xjgdp7x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-09-25-rneggnr",
+      "file": "documents/rns-reading/2025-09-25_rneggnr.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-09-23-rm7n62r",
+      "file": "documents/rns-reading/2025-09-23_rm7n62r.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-05-23-xolp11x",
+      "file": "documents/rns-reading/2025-05-23_xolp11x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-05-20-wk6j3ox",
+      "file": "documents/rns-reading/2025-05-20_wk6j3ox.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-05-16-r7847gw",
+      "file": "documents/rns-reading/2025-05-16_r7847gw.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-04-02-r78o0zw",
+      "file": "documents/rns-reading/2025-04-02_r78o0zw.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-03-14-w6oyp9w",
+      "file": "documents/rns-reading/2025-03-14_w6oyp9w.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "fin-rns-2025-jan-trading",
+      "file": "documents/rns-reading/2025-01-29_rme16vw.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-11-12-rd8g64w",
+      "file": "documents/rns-reading/2024-11-12_rd8g64w.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-09-24-w97zjex",
+      "file": "documents/rns-reading/2024-09-24_w97zjex.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-08-27-x5kjy8x",
+      "file": "documents/rns-reading/2024-08-27_x5kjy8x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-08-09-w6vg29x",
+      "file": "documents/rns-reading/2024-08-09_w6vg29x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-06-21-x27odmw",
+      "file": "documents/rns-reading/2024-06-21_x27odmw.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-06-17-xekyd2x",
+      "file": "documents/rns-reading/2024-06-17_xekyd2x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-06-17-x8y8new",
+      "file": "documents/rns-reading/2024-06-17_x8y8new.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-06-14-wvdqv3w",
+      "file": "documents/rns-reading/2024-06-14_wvdqv3w.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-06-11-w946kdx",
+      "file": "documents/rns-reading/2024-06-11_w946kdx.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-06-11-r7p151r",
+      "file": "documents/rns-reading/2024-06-11_r7p151r.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-08-19-x2yd36w",
+      "file": "documents/rns-reading/2026-08-19_x2yd36w.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-08-19-ry06nyx",
+      "file": "documents/rns-reading/2026-08-19_ry06nyx.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-04-29-x5e8g2x",
+      "file": "documents/rns-reading/2026-04-29_x5e8g2x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-04-28-xz5emlx",
+      "file": "documents/rns-reading/2026-04-28_xz5emlx.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-08-03-w1zzn3x",
+      "file": "documents/rns-reading/2026-08-03_w1zzn3x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-06-12-x5em48x",
+      "file": "documents/rns-reading/2026-06-12_x5em48x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-05-11-xp7vnmx",
+      "file": "documents/rns-reading/2026-05-11_xp7vnmx.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-05-01-rymo4yr",
+      "file": "documents/rns-reading/2026-05-01_rymo4yr.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-04-27-w0njepr",
+      "file": "documents/rns-reading/2026-04-27_w0njepr.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-04-21-rymj1yr",
+      "file": "documents/rns-reading/2026-04-21_rymj1yr.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-04-20-rgozmzx",
+      "file": "documents/rns-reading/2026-04-20_rgozmzx.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-03-04-x2zjq6x",
+      "file": "documents/rns-reading/2026-03-04_x2zjq6x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-02-16-w39om2w",
+      "file": "documents/rns-reading/2026-02-16_w39om2w.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-02-11-xo9mg1x",
+      "file": "documents/rns-reading/2026-02-11_xo9mg1x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-02-09-wvy2jzw",
+      "file": "documents/rns-reading/2026-02-09_wvy2jzw.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-02-04-xlnpgpw",
+      "file": "documents/rns-reading/2026-02-04_xlnpgpw.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-02-02-wk1pg2r",
+      "file": "documents/rns-reading/2026-02-02_wk1pg2r.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-01-30-xlnvogw",
+      "file": "documents/rns-reading/2026-01-30_xlnvogw.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-01-30-x2z2pmx",
+      "file": "documents/rns-reading/2026-01-30_x2z2pmx.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-01-14-w9pgm4x",
+      "file": "documents/rns-reading/2026-01-14_w9pgm4x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2026-01-08-x2zmmnx",
+      "file": "documents/rns-reading/2026-01-08_x2zmmnx.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-12-04-xjgl3gx",
+      "file": "documents/rns-reading/2025-12-04_xjgl3gx.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-12-01-w900qdw",
+      "file": "documents/rns-reading/2025-12-01_w900qdw.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-11-25-ry33p7x",
+      "file": "documents/rns-reading/2025-11-25_ry33p7x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-11-20-xl9ojjx",
+      "file": "documents/rns-reading/2025-11-20_xl9ojjx.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-11-19-ry3v5yx",
+      "file": "documents/rns-reading/2025-11-19_ry3v5yx.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-11-19-x20pgmr",
+      "file": "documents/rns-reading/2025-11-19_x20pgmr.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-11-06-w60g6gw",
+      "file": "documents/rns-reading/2025-11-06_w60g6gw.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-08-07-xl9mm9x",
+      "file": "documents/rns-reading/2025-08-07_xl9mm9x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-08-01-w10qq4r",
+      "file": "documents/rns-reading/2025-08-01_w10qq4r.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-08-01-x50992r",
+      "file": "documents/rns-reading/2025-08-01_x50992r.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-07-29-ry3p89x",
+      "file": "documents/rns-reading/2025-07-29_ry3p89x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-06-18-rn3eznw",
+      "file": "documents/rns-reading/2025-06-18_rn3eznw.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-04-17-rgv4e3r",
+      "file": "documents/rns-reading/2025-04-17_rgv4e3r.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-02-24-ryvlnkr",
+      "file": "documents/rns-reading/2025-02-24_ryvlnkr.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-02-03-xe361jr",
+      "file": "documents/rns-reading/2025-02-03_xe361jr.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2025-01-03-rd88d8w",
+      "file": "documents/rns-reading/2025-01-03_rd88d8w.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-12-18-xpvdomx",
+      "file": "documents/rns-reading/2024-12-18_xpvdomx.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-10-30-rd8993w",
+      "file": "documents/rns-reading/2024-10-30_rd8993w.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-10-14-w0o658w",
+      "file": "documents/rns-reading/2024-10-14_w0o658w.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-10-04-rmeyovw",
+      "file": "documents/rns-reading/2024-10-04_rmeyovw.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-10-01-x41q63x",
+      "file": "documents/rns-reading/2024-10-01_x41q63x.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-08-28-x4je3kx",
+      "file": "documents/rns-reading/2024-08-28_x4je3kx.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-08-05-xld4qgr",
+      "file": "documents/rns-reading/2024-08-05_xld4qgr.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-07-09-xjd3dox",
+      "file": "documents/rns-reading/2024-07-09_xjd3dox.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-07-08-w19ny4r",
+      "file": "documents/rns-reading/2024-07-08_w19ny4r.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-07-05-x8yqlew",
+      "file": "documents/rns-reading/2024-07-05_x8yqlew.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-07-04-rmdnp2r",
+      "file": "documents/rns-reading/2024-07-04_rmdnp2r.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-07-02-wkdq3or",
+      "file": "documents/rns-reading/2024-07-02_wkdq3or.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-07-01-xqd117w",
+      "file": "documents/rns-reading/2024-07-01_xqd117w.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-06-21-rdj0kpr",
+      "file": "documents/rns-reading/2024-06-21_rdj0kpr.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-06-18-rmd5qnr",
+      "file": "documents/rns-reading/2024-06-18_rmd5qnr.html",
+      "pages": 1,
+      "format": "html"
+    },
+    {
+      "source_id": "rns-2024-06-18-w6vnqqx",
+      "file": "documents/rns-reading/2024-06-18_w6vnqqx.html",
+      "pages": 1,
+      "format": "html"
+    }
+  ],
+  "total_pages": 3083,
+  "web_captures": 131,
+  "native_pages": 2585,
+  "ocr_pages": 492,
+  "unsearchable_pages": 6,
+  "note": "Search text is machine extraction for navigation. Verify numbers and quotations in the source document. The public index contains primary-source PDFs and inert issuer/Foundation/announcement reading copies; third-party transcript text is excluded."
+}
